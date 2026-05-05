@@ -53,8 +53,7 @@ h1 {
 }
 
 .title-outline {
-  -webkit-text-stroke: 2px var(--navy);
-  color: transparent;
+  color: var(--cream);
 }
 
 p { margin: 0.5rem 0; }
@@ -385,4 +384,23 @@ code {
 @keyframes scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-100%); }
+}
+
+/* Disclaimer */
+.disclaimer {
+  position: fixed;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  background: var(--navy);
+  color: var(--cream);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  opacity: 0.85;
+  pointer-events: none;
+  max-width: 80vw;
+  text-align: center;
+  z-index: 100;
 }
