@@ -713,7 +713,13 @@ async function initQuiz() {
     return words.some((w) => text.includes(w));
   }
 
+  const DRINK_CATEGORIES = new Set([
+    "N/A Beverages", "Juices", "Espresso", "Tea",
+    "Specialty Drinks", "Draught Beer", "Bottles & Cans", "Wine",
+  ]);
+
   function dietaryFacts(item) {
+    if (DRINK_CATEGORIES.has(item.category)) return [];
     const notes = (item.notes || "").toLowerCase();
     const allergens = (item.allergens || []).map((a) => a.toLowerCase());
     const facts = [];
