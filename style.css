@@ -704,30 +704,33 @@ html.locked, html.locked > body { background: var(--navy); }
   to { opacity: 1; transform: scale(1.01); }
 }
 
-.loading-marquee {
+.loading-tip {
   width: 100%;
   background: var(--orange);
   color: var(--navy);
-  padding: 0.85rem 0;
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: "Bowlby One", sans-serif;
-  text-transform: uppercase;
-  font-size: clamp(0.85rem, 2.4vw, 1.1rem);
-  letter-spacing: 0.05em;
+  padding: 1.1rem 1.5rem;
+  text-align: center;
   border-top: 3px solid var(--cream);
   border-bottom: 3px solid var(--cream);
+  font-family: "Bowlby One", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(0.95rem, 2.7vw, 1.3rem);
+  letter-spacing: 0.05em;
+  line-height: 1.25;
+  animation: tipPulse 1.4s ease-in-out infinite;
+  text-shadow: 0 0 0 var(--orange);
 }
-.loading-marquee-track {
-  display: inline-block;
-  animation: scroll 55s linear infinite;
-  padding-left: 100%;
-}
-.loading-marquee span { padding: 0 2.5rem; }
-.loading-marquee span::before {
-  content: "★";
-  margin-right: 1.25rem;
-  color: var(--cream);
+@keyframes tipPulse {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 18px rgba(28, 49, 88, 0.55), 0 0 4px rgba(28, 49, 88, 0.4);
+    filter: brightness(1.05);
+  }
+  50% {
+    opacity: 0.55;
+    text-shadow: 0 0 0 rgba(28, 49, 88, 0);
+    filter: brightness(0.85);
+  }
 }
 
 .loading-bar-wrap {
