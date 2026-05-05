@@ -15,8 +15,8 @@ function setupPasswordGate() {
   gate.innerHTML = `
     <div class="lock-card">
       <div class="lock-eyebrow">Staff Access</div>
-      <div class="lock-title">JAM!</div>
-      <div class="lock-sub">Menu Exam Study Guide</div>
+      <div class="lock-title">Menu Study</div>
+      <div class="lock-sub">Exam Study Guide</div>
       <form id="lock-form" class="lock-form" autocomplete="off">
         <label for="lock-input" class="lock-label">Password</label>
         <input id="lock-input" type="password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
