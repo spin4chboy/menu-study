@@ -55,6 +55,28 @@ function resetProgress() {
   localStorage.removeItem(QUIZ_STATS_KEY);
 }
 
+const WRONG_MESSAGES = [
+  "Dre wants to talk with you.",
+  "Sarah is coming for your ass.",
+  "Elisha's not mad, she's just disappointed.",
+  "Tony thinks you're just plain stupid.",
+];
+
+function showWrongFeedback() {
+  const msg = WRONG_MESSAGES[Math.floor(Math.random() * WRONG_MESSAGES.length)];
+
+  const flash = document.createElement("div");
+  flash.className = "screen-flash";
+  document.body.appendChild(flash);
+  setTimeout(() => flash.remove(), 600);
+
+  const toast = document.createElement("div");
+  toast.className = "wrong-toast";
+  toast.textContent = msg;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 2500);
+}
+
 function shuffle(arr) {
   const a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
@@ -356,6 +378,7 @@ async function initQuiz() {
     feedbackEl.className = isCorrect ? "feedback correct-text" : "feedback incorrect-text";
     scoreEl.textContent = `Session: ${sessionCorrect} / ${sessionTotal}`;
     nextBtn.style.visibility = "visible";
+    if (!isCorrect) showWrongFeedback();
   }
 
   // --- Mode 2: Pick the ingredients ---
@@ -442,6 +465,7 @@ async function initQuiz() {
       if (missed) parts.push(`${missed} missing`);
       feedbackEl.textContent = `Nah — ${parts.join(", ")}. Fix it and try again.`;
       feedbackEl.className = "feedback incorrect-text";
+      showWrongFeedback();
     }
   }
 
