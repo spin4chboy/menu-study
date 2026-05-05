@@ -377,18 +377,24 @@ async function initQuiz() {
   // --- Mode 1: Name the dish ---
   function pickNameQuestion() {
     const pool = getPool();
-    const eligible = pool.filter((i) => i.ingredients && i.ingredients.length >= 1);
+    const hasClue = (i) =>
+      (i.ingredients && i.ingredients.length >= 1) || (i.description && i.description.length > 0);
+    const eligible = pool.filter(hasClue);
     if (eligible.length < 2) {
       promptEl.innerHTML = "";
       optionsEl.className = "quiz-options";
-      optionsEl.innerHTML = `<p class="empty-msg">Not enough items in <strong>${activeCategory}</strong> with ingredients to quiz on. Pick another category.</p>`;
+      optionsEl.innerHTML = `<p class="empty-msg">Not enough items in <strong>${activeCategory}</strong> to quiz on. Pick another category.</p>`;
       nextBtn.style.visibility = "hidden";
       return;
     }
     current = eligible[Math.floor(Math.random() * eligible.length)];
+    const hasIngredients = current.ingredients && current.ingredients.length;
+    const clue = hasIngredients
+      ? `<p><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>`
+      : `<p>${current.description}</p>`;
     promptEl.innerHTML = `
       <div class="quiz-category">${current.category}</div>
-      <p><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>
+      ${clue}
     `;
 
     const distractorPool = pool.filter((i) => i.id !== current.id);
