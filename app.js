@@ -193,10 +193,13 @@ async function initBrowse() {
     ]);
     card.appendChild(header);
 
+    const hasIngredients = item.ingredients && item.ingredients.length;
     const details = el("div", { class: "card-details" }, [
-      item.ingredients && item.ingredients.length
+      hasIngredients
         ? el("p", {}, [el("strong", {}, "Ingredients: "), item.ingredients.join(", ")])
-        : null,
+        : item.description
+          ? el("p", { class: "card-desc" }, item.description)
+          : null,
       item.allergens && item.allergens.length
         ? el("p", {}, [el("strong", {}, "Allergens: "), item.allergens.join(", ")])
         : null,
@@ -265,9 +268,10 @@ async function initFlashcards() {
     }
     current = pool.pop();
     frontEl.innerHTML = `<div class="fc-name">${current.name}</div><div class="fc-hint">tap to reveal</div>`;
+    const fcHasIngredients = current.ingredients && current.ingredients.length;
     backEl.innerHTML = `
       <div class="fc-price">${[formatPrice(current.price), current.category].filter(Boolean).join(" · ")}</div>
-      ${current.ingredients && current.ingredients.length ? `<p><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>` : ""}
+      ${fcHasIngredients ? `<p><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>` : current.description ? `<p>${current.description}</p>` : ""}
       ${current.allergens && current.allergens.length ? `<p><strong>Allergens:</strong> ${current.allergens.join(", ")}</p>` : ""}
       ${current.notes ? `<p class="fc-notes">${current.notes}</p>` : ""}
     `;
