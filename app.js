@@ -1,7 +1,57 @@
 const KNOWN_KEY = "menuStudy.knownIds";
 const QUIZ_STATS_KEY = "menuStudy.quizStats";
 
-// Smooth fade between pages
+// Loading-screen tips
+const LOADING_TIPS = [
+  "Fun Fact: Dre is the Bozeman little league baseball MVP.",
+  "Tip: Never talk to Tony if you're not clocked in.",
+  "Tip: Ask Sarah if you should clock out while eating a meal after your shift.",
+  "Tip: Hit your vape in the main dining area.",
+  "Fun Fact: You're encouraged to be on your phone at the host stand.",
+];
+
+function showLoadingScreen(targetUrl) {
+  const overlay = document.createElement("div");
+  overlay.className = "loading-screen";
+  // Build marquee track with each tip repeated so it scrolls smoothly
+  const tipSpans = LOADING_TIPS.map((t) => `<span>${t}</span>`).join("");
+  overlay.innerHTML = `
+    <div class="loading-title">LOADING</div>
+    <div class="loading-marquee">
+      <div class="loading-marquee-track">${tipSpans}${tipSpans}</div>
+    </div>
+    <div class="loading-bar-wrap">
+      <div class="loading-bar-track"><div class="loading-bar"></div></div>
+      <div class="loading-percent">0%</div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  const duration = 5000 + Math.random() * 2000; // 5–7s
+  const bar = overlay.querySelector(".loading-bar");
+  const pct = overlay.querySelector(".loading-percent");
+  const start = performance.now();
+
+  function tick(now) {
+    const elapsed = now - start;
+    const ratio = Math.min(1, elapsed / duration);
+    const eased = ratio < 0.95
+      ? ratio * (0.85 + Math.random() * 0.05)
+      : ratio;
+    const display = Math.floor(eased * 100);
+    bar.style.width = display + "%";
+    pct.textContent = display + "%";
+    if (ratio < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      bar.style.width = "100%";
+      pct.textContent = "100%";
+      setTimeout(() => { window.location.href = targetUrl; }, 200);
+    }
+  }
+  requestAnimationFrame(tick);
+}
+
 function setupPageTransitions() {
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href");
@@ -9,8 +59,7 @@ function setupPageTransitions() {
     link.addEventListener("click", (e) => {
       if (e.metaKey || e.ctrlKey || e.shiftKey || link.target === "_blank") return;
       e.preventDefault();
-      document.body.classList.add("page-leave");
-      setTimeout(() => { window.location.href = href; }, 220);
+      showLoadingScreen(href);
     });
   });
 }
