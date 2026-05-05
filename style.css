@@ -90,6 +90,31 @@ p { margin: 0.5rem 0; }
 }
 .back:hover { color: var(--orange); }
 
+.back-fab {
+  position: fixed;
+  top: 0.85rem;
+  left: 0.85rem;
+  z-index: 50;
+  background: var(--navy);
+  color: var(--cream);
+  text-decoration: none;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid var(--cream);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+  transition: background 0.15s, color 0.15s, transform 0.05s;
+}
+.back-fab:hover { background: var(--cream); color: var(--navy); }
+.back-fab:active { transform: translateY(1px); }
+
 a { color: var(--navy); }
 
 footer {
