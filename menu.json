@@ -6,7 +6,7 @@
     "description": "House-made jam and grilled country toast.",
     "ingredients": [
       "house-made jam",
-      "grilled country toast"
+      "country toast"
     ],
     "allergens": [
       "gluten"
@@ -301,7 +301,7 @@
     "description": "2 soft poached eggs, toast, and avocado. Served with walnut-herb pesto and citrus arugula.",
     "ingredients": [
       "soft poached eggs",
-      "toast",
+      "country toast",
       "avocado",
       "walnut-herb pesto",
       "citrus arugula"
@@ -719,7 +719,7 @@
     "category": "Lunch",
     "description": "House-made country bread with American and Jack cheese.",
     "ingredients": [
-      "country bread",
+      "country toast",
       "American cheese",
       "Jack cheese"
     ],
