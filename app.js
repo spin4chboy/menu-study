@@ -318,9 +318,25 @@ async function initQuiz() {
   let answered = false;
   let sessionCorrect = 0;
   let sessionTotal = 0;
+  let queue = [];
+  let cycleTotal = 0;
 
   function getPool() {
     return activeCategory === "All" ? items : items.filter((i) => i.category === activeCategory);
+  }
+
+  function rebuildQueue() {
+    const pool = getPool();
+    let eligible;
+    if (mode === "name") {
+      eligible = pool.filter(
+        (i) => (i.ingredients && i.ingredients.length >= 1) || (i.description && i.description.length > 0)
+      );
+    } else {
+      eligible = pool.filter((i) => i.ingredients && i.ingredients.length >= 3);
+    }
+    queue = shuffle(eligible);
+    cycleTotal = queue.length;
   }
 
   function renderCategories() {
@@ -337,6 +353,7 @@ async function initQuiz() {
             sessionCorrect = 0;
             sessionTotal = 0;
             scoreEl.textContent = "Session: 0 / 0";
+            rebuildQueue();
             pickQuestion();
           },
         },
@@ -354,6 +371,7 @@ async function initQuiz() {
     sessionCorrect = 0;
     sessionTotal = 0;
     scoreEl.textContent = "Session: 0 / 0";
+    rebuildQueue();
     pickQuestion();
   }
 
@@ -370,24 +388,45 @@ async function initQuiz() {
     nextBtn.textContent = "Next →";
     nextBtn.onclick = () => pickQuestion();
 
+    if (cycleTotal === 0) {
+      promptEl.innerHTML = "";
+      optionsEl.className = "quiz-options";
+      optionsEl.innerHTML = `<p class="empty-msg">Not enough items in <strong>${activeCategory}</strong> to quiz on. Pick another category.</p>`;
+      return;
+    }
+    if (queue.length === 0) {
+      showCompletion();
+      return;
+    }
+    current = queue.pop();
     if (mode === "name") return pickNameQuestion();
     if (mode === "ingredients") return pickIngredientsQuestion();
+  }
+
+  function showCompletion() {
+    const where = activeCategory === "All" ? "the whole menu" : activeCategory;
+    promptEl.innerHTML = `
+      <div class="quiz-category">Cycle complete</div>
+      <p style="font-family: 'Bowlby One', sans-serif; font-size: clamp(1.3rem, 4.5vw, 1.9rem); text-transform: uppercase; line-height: 1.05; margin: 0.5rem 0 0;">You ran all ${cycleTotal} items in ${where}.</p>
+    `;
+    optionsEl.className = "quiz-options";
+    optionsEl.innerHTML = "";
+    feedbackEl.textContent = `Final: ${sessionCorrect} / ${sessionTotal}`;
+    feedbackEl.className = "feedback correct-text";
+    nextBtn.textContent = "Start Over";
+    nextBtn.style.visibility = "visible";
+    nextBtn.onclick = () => {
+      sessionCorrect = 0;
+      sessionTotal = 0;
+      scoreEl.textContent = "Session: 0 / 0";
+      rebuildQueue();
+      pickQuestion();
+    };
   }
 
   // --- Mode 1: Name the dish ---
   function pickNameQuestion() {
     const pool = getPool();
-    const hasClue = (i) =>
-      (i.ingredients && i.ingredients.length >= 1) || (i.description && i.description.length > 0);
-    const eligible = pool.filter(hasClue);
-    if (eligible.length < 2) {
-      promptEl.innerHTML = "";
-      optionsEl.className = "quiz-options";
-      optionsEl.innerHTML = `<p class="empty-msg">Not enough items in <strong>${activeCategory}</strong> to quiz on. Pick another category.</p>`;
-      nextBtn.style.visibility = "hidden";
-      return;
-    }
-    current = eligible[Math.floor(Math.random() * eligible.length)];
     const hasIngredients = current.ingredients && current.ingredients.length;
     const clue = hasIngredients
       ? `<p><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>`
@@ -395,6 +434,7 @@ async function initQuiz() {
     promptEl.innerHTML = `
       <div class="quiz-category">${current.category}</div>
       ${clue}
+      <p class="quiz-hint" style="margin-top: 0.6rem;">${queue.length + 1} of ${cycleTotal} left</p>
     `;
 
     const distractorPool = pool.filter((i) => i.id !== current.id);
@@ -440,16 +480,6 @@ async function initQuiz() {
   // --- Mode 2: Pick the ingredients ---
   function pickIngredientsQuestion() {
     const pool = getPool();
-    const eligible = pool.filter((i) => i.ingredients && i.ingredients.length >= 3);
-    if (eligible.length < 1) {
-      promptEl.innerHTML = "";
-      optionsEl.className = "quiz-options";
-      optionsEl.innerHTML = `<p class="empty-msg">Not enough items in <strong>${activeCategory}</strong> with full ingredient lists. Pick another category.</p>`;
-      nextBtn.style.visibility = "hidden";
-      return;
-    }
-    current = eligible[Math.floor(Math.random() * eligible.length)];
-
     const correctSet = new Set(current.ingredients.map((s) => s.toLowerCase().trim()));
     const decoyPool = new Set();
     for (const it of pool) {
@@ -469,7 +499,7 @@ async function initQuiz() {
     promptEl.innerHTML = `
       <div class="quiz-category">${current.category}</div>
       <p style="font-family: 'Bowlby One', sans-serif; font-size: 1.4rem; text-transform: uppercase; line-height: 1.05; margin-top: 0.25rem;">${current.name}</p>
-      <p class="quiz-hint">Select all the ingredients in this item.</p>
+      <p class="quiz-hint">Select all the ingredients in this item. ${queue.length + 1} of ${cycleTotal} left.</p>
     `;
 
     optionsEl.className = "quiz-options ingredient-grid";
@@ -535,5 +565,6 @@ async function initQuiz() {
 
   renderCategories();
   scoreEl.textContent = "Session: 0 / 0";
+  rebuildQueue();
   pickQuestion();
 }
