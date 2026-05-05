@@ -13,12 +13,13 @@ const LOADING_TIPS = [
 function showLoadingScreen(targetUrl) {
   const overlay = document.createElement("div");
   overlay.className = "loading-screen";
-  // Build marquee track with each tip repeated so it scrolls smoothly
-  const tipSpans = LOADING_TIPS.map((t) => `<span>${t}</span>`).join("");
+  const tip = LOADING_TIPS[Math.floor(Math.random() * LOADING_TIPS.length)];
+  // Repeat the same tip across the track so the marquee scrolls smoothly
+  const tipSpans = Array(6).fill(`<span>${tip}</span>`).join("");
   overlay.innerHTML = `
     <div class="loading-title">LOADING</div>
     <div class="loading-marquee">
-      <div class="loading-marquee-track">${tipSpans}${tipSpans}</div>
+      <div class="loading-marquee-track">${tipSpans}</div>
     </div>
     <div class="loading-bar-wrap">
       <div class="loading-bar-track"><div class="loading-bar"></div></div>
