@@ -3,48 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Griffin Silver</title>
-  <meta name="description" content="Personal site of Griffin Silver.">
+  <title>Menu Study</title>
+  <meta name="description" content="A study tool for memorizing the restaurant menu.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Griffin Silver</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-    </nav>
+    <h1>Menu Study</h1>
+    <p id="progress" class="muted">Loading…</p>
+    <p id="quiz-stats" class="muted"></p>
   </header>
 
   <main>
-    <section>
-      <h2>Hi, I'm Griffin.</h2>
-      <p>
-        Welcome to my corner of the internet. This site is where I poke
-        around and see what I can build — a place to try things out and
-        find out what's possible.
-      </p>
-    </section>
+    <nav class="mode-grid">
+      <a class="mode-btn" href="browse.html">
+        <span class="mode-title">Browse</span>
+        <span class="mode-sub">Read through every item</span>
+      </a>
+      <a class="mode-btn" href="flashcards.html">
+        <span class="mode-title">Flashcards</span>
+        <span class="mode-sub">Drill names → details</span>
+      </a>
+      <a class="mode-btn" href="quiz.html">
+        <span class="mode-title">Quiz</span>
+        <span class="mode-sub">Multiple choice from descriptions</span>
+      </a>
+    </nav>
 
-    <section>
-      <h2>What I'm working on</h2>
-      <ul>
-        <li>Project one — short description.</li>
-        <li>Project two — short description.</li>
-        <li>Project three — short description.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Get in touch</h2>
-      <p>
-        Find me on <a href="https://github.com/griffinsilver-maker" rel="me">GitHub</a>.
-      </p>
-    </section>
+    <div class="actions">
+      <button id="reset-btn" class="btn btn-ghost">Reset progress</button>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; <span id="year">2026</span> Griffin Silver</p>
+    <p class="muted">Edit <code>menu.json</code> to update items.</p>
   </footer>
+
+  <script src="app.js"></script>
+  <script>initHome();</script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz — Menu Study</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="back">← Home</a>
+    <h1>Quiz</h1>
+    <p id="quiz-score" class="muted"></p>
+  </header>
+
+  <main>
+    <div id="quiz-prompt" class="quiz-prompt"></div>
+    <div id="quiz-options" class="quiz-options"></div>
+    <p id="quiz-feedback"></p>
+    <div class="actions">
+      <button id="quiz-next" class="btn">Next →</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>initQuiz();</script>
+</body>
+</html>

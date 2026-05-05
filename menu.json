@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bruschetta",
+    "name": "Tomato Bruschetta",
+    "category": "Apps",
+    "description": "Toasted baguette topped with diced tomatoes, basil, garlic, and olive oil.",
+    "ingredients": ["baguette", "tomato", "basil", "garlic", "olive oil", "balsamic"],
+    "price": 9.0,
+    "allergens": ["gluten"],
+    "notes": "Vegan."
+  },
+  {
+    "id": "caesar-salad",
+    "name": "Caesar Salad",
+    "category": "Apps",
+    "description": "Romaine, parmesan, croutons, anchovy caesar dressing.",
+    "ingredients": ["romaine", "parmesan", "croutons", "anchovy", "lemon", "egg yolk"],
+    "price": 11.0,
+    "allergens": ["gluten", "dairy", "fish", "egg"],
+    "notes": "Add chicken +$5, add salmon +$8."
+  },
+  {
+    "id": "burger-classic",
+    "name": "Classic Burger",
+    "category": "Mains",
+    "description": "8oz beef patty with lettuce, tomato, onion, pickles on a brioche bun.",
+    "ingredients": ["beef", "lettuce", "tomato", "onion", "pickles", "brioche"],
+    "price": 16.0,
+    "allergens": ["gluten", "egg"],
+    "notes": "Comes with fries. Sub salad +$2. Add cheese +$1, bacon +$2."
+  },
+  {
+    "id": "salmon-plate",
+    "name": "Pan-Seared Salmon",
+    "category": "Mains",
+    "description": "Atlantic salmon, lemon-butter sauce, seasonal vegetables, wild rice.",
+    "ingredients": ["salmon", "butter", "lemon", "rice", "asparagus", "carrot"],
+    "price": 26.0,
+    "allergens": ["fish", "dairy"],
+    "notes": "Gluten-free."
+  },
+  {
+    "id": "margherita-pizza",
+    "name": "Margherita Pizza",
+    "category": "Mains",
+    "description": "San Marzano tomato, fresh mozzarella, basil, olive oil on wood-fired crust.",
+    "ingredients": ["dough", "tomato", "mozzarella", "basil", "olive oil"],
+    "price": 17.0,
+    "allergens": ["gluten", "dairy"],
+    "notes": "Vegetarian."
+  },
+  {
+    "id": "tiramisu",
+    "name": "Tiramisu",
+    "category": "Desserts",
+    "description": "Espresso-soaked ladyfingers layered with mascarpone cream, dusted with cocoa.",
+    "ingredients": ["ladyfingers", "espresso", "mascarpone", "egg", "sugar", "cocoa"],
+    "price": 9.0,
+    "allergens": ["gluten", "dairy", "egg"],
+    "notes": "Contains alcohol (marsala)."
+  },
+  {
+    "id": "house-red",
+    "name": "House Red",
+    "category": "Drinks",
+    "description": "Glass of our rotating house red wine, currently a Tuscan Sangiovese.",
+    "ingredients": ["red wine"],
+    "price": 11.0,
+    "allergens": ["sulfites"],
+    "notes": "Bottle $42."
+  },
+  {
+    "id": "lemonade",
+    "name": "Fresh Lemonade",
+    "category": "Drinks",
+    "description": "House-made lemonade with fresh-squeezed lemon and mint.",
+    "ingredients": ["lemon", "sugar", "water", "mint"],
+    "price": 5.0,
+    "allergens": [],
+    "notes": "Free refills."
+  }
+]

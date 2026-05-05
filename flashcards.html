@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards — Menu Study</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="back">← Home</a>
+    <h1>Flashcards</h1>
+    <p id="counter" class="muted"></p>
+  </header>
+
+  <main>
+    <label class="toggle">
+      <input type="checkbox" id="include-known"> Include items I've marked known
+    </label>
+
+    <div id="flashcard" class="flashcard">
+      <div class="flashcard-inner">
+        <div id="card-front" class="flashcard-face flashcard-front"></div>
+        <div id="card-back" class="flashcard-face flashcard-back"></div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="review-again" class="btn btn-ghost">Review again</button>
+      <button id="got-it" class="btn">Got it</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>initFlashcards();</script>
+</body>
+</html>
