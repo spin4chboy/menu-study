@@ -720,7 +720,7 @@ html.locked, html.locked > body { background: var(--navy); }
 }
 .loading-marquee-track {
   display: inline-block;
-  animation: scroll 26s linear infinite;
+  animation: scroll 55s linear infinite;
   padding-left: 100%;
 }
 .loading-marquee span { padding: 0 2.5rem; }
