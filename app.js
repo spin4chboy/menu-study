@@ -65,6 +65,7 @@ function shuffle(arr) {
 }
 
 function formatPrice(n) {
+  if (n == null || n === 0) return "";
   return `$${n.toFixed(2)}`;
 }
 
@@ -156,7 +157,9 @@ async function initBrowse() {
 
     const details = el("div", { class: "card-details" }, [
       el("p", { class: "card-desc" }, item.description),
-      el("p", {}, [el("strong", {}, "Ingredients: "), item.ingredients.join(", ")]),
+      item.ingredients && item.ingredients.length
+        ? el("p", {}, [el("strong", {}, "Ingredients: "), item.ingredients.join(", ")])
+        : null,
       item.allergens && item.allergens.length
         ? el("p", {}, [el("strong", {}, "Allergens: "), item.allergens.join(", ")])
         : null,
@@ -226,9 +229,9 @@ async function initFlashcards() {
     current = pool.pop();
     frontEl.innerHTML = `<div class="fc-name">${current.name}</div><div class="fc-hint">tap to reveal</div>`;
     backEl.innerHTML = `
-      <div class="fc-price">${formatPrice(current.price)} · ${current.category}</div>
+      <div class="fc-price">${[formatPrice(current.price), current.category].filter(Boolean).join(" · ")}</div>
       <p>${current.description}</p>
-      <p><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>
+      ${current.ingredients && current.ingredients.length ? `<p><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>` : ""}
       ${current.allergens && current.allergens.length ? `<p><strong>Allergens:</strong> ${current.allergens.join(", ")}</p>` : ""}
       ${current.notes ? `<p class="fc-notes">${current.notes}</p>` : ""}
     `;
@@ -282,7 +285,7 @@ async function initQuiz() {
     promptEl.innerHTML = `
       <div class="quiz-category">${current.category}</div>
       <p>${current.description}</p>
-      <p class="quiz-hint"><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>
+      ${current.ingredients && current.ingredients.length ? `<p class="quiz-hint"><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>` : ""}
     `;
 
     const sameCategory = items.filter((i) => i.category === current.category && i.id !== current.id);
