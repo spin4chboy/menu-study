@@ -717,19 +717,28 @@ html.locked, html.locked > body { background: var(--navy); }
   font-size: clamp(0.95rem, 2.7vw, 1.3rem);
   letter-spacing: 0.05em;
   line-height: 1.25;
-  animation: tipPulse 1.4s ease-in-out infinite;
-  text-shadow: 0 0 0 var(--orange);
 }
-@keyframes tipPulse {
-  0%, 100% {
+.loading-tip > span {
+  display: inline-block;
+  animation: neonFlicker 4s steps(1, end) infinite;
+  text-shadow: 0 0 8px rgba(28, 49, 88, 0.4), 0 0 16px rgba(28, 49, 88, 0.25);
+}
+@keyframes neonFlicker {
+  0%, 19%, 22%, 62%, 64%, 100% {
     opacity: 1;
-    text-shadow: 0 0 18px rgba(28, 49, 88, 0.55), 0 0 4px rgba(28, 49, 88, 0.4);
-    filter: brightness(1.05);
+    text-shadow: 0 0 8px rgba(28, 49, 88, 0.45), 0 0 18px rgba(28, 49, 88, 0.3);
   }
-  50% {
+  20%, 21%, 63% {
     opacity: 0.55;
-    text-shadow: 0 0 0 rgba(28, 49, 88, 0);
-    filter: brightness(0.85);
+    text-shadow: none;
+  }
+  40%, 42% {
+    opacity: 0.85;
+    text-shadow: 0 0 4px rgba(28, 49, 88, 0.2);
+  }
+  41% {
+    opacity: 0.4;
+    text-shadow: none;
   }
 }
 

@@ -82,7 +82,7 @@ function showLoadingScreen(targetUrl) {
   const tip = LOADING_TIPS[Math.floor(Math.random() * LOADING_TIPS.length)];
   overlay.innerHTML = `
     <div class="loading-title">LOADING</div>
-    <div class="loading-tip">${tip}</div>
+    <div class="loading-tip"><span>${tip}</span></div>
     <div class="loading-bar-wrap">
       <div class="loading-bar-track"><div class="loading-bar"></div></div>
       <div class="loading-percent">0%</div>
