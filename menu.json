@@ -111,7 +111,8 @@
     "category": "Pancakes",
     "description": "Cinnamon chip buttermilk pancake topped with cinnamon buttercream, caramel sauce, royal vanilla icing, and powdered sugar.",
     "ingredients": [
-      "cinnamon chip buttermilk pancake",
+      "buttermilk pancake",
+      "cinnamon chips",
       "cinnamon buttercream",
       "caramel sauce",
       "royal vanilla icing",
@@ -151,7 +152,8 @@
     "category": "Pancakes",
     "description": "Chocolate chip buttermilk pancake topped with whipped peanut butter sauce and honey butter, garnished with powdered sugar.",
     "ingredients": [
-      "chocolate chip buttermilk pancake",
+      "buttermilk pancake",
+      "chocolate chips",
       "whipped peanut butter sauce",
       "honey butter",
       "powdered sugar"
