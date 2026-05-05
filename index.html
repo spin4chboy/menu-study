@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Study</title>
-  <meta name="description" content="A study tool for memorizing the restaurant menu.">
+  <title>JAM! Menu Study</title>
+  <meta name="description" content="A study tool for memorizing the JAM menu.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Menu Study</h1>
-    <p id="progress" class="muted">Loading…</p>
+    <p class="muted">JAM! ON MAIN — STAFF STUDY GUIDE</p>
+    <h1>THE BEST WAY</h1>
+    <h1 class="title-outline">TO LEARN THE MENU</h1>
+    <p id="progress" class="muted" style="margin-top: 1rem;">Loading…</p>
     <p id="quiz-stats" class="muted"></p>
   </header>
+
+  <div class="brand-strip">
+    <div class="brand-strip-track">
+      <span>BROWSE</span><span>FLASHCARDS</span><span>QUIZ</span><span>BROWSE</span><span>FLASHCARDS</span><span>QUIZ</span><span>BROWSE</span><span>FLASHCARDS</span><span>QUIZ</span>
+    </div>
+  </div>
 
   <main>
     <nav class="mode-grid">
@@ -31,12 +39,12 @@
     </nav>
 
     <div class="actions">
-      <button id="reset-btn" class="btn btn-ghost">Reset progress</button>
+      <button id="reset-btn" class="btn btn-ghost">Reset Progress</button>
     </div>
   </main>
 
   <footer>
-    <p class="muted">Edit <code>menu.json</code> to update items.</p>
+    <p>Edit <code>menu.json</code> to update items.</p>
   </footer>
 
   <script src="app.js"></script>
