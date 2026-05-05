@@ -8,6 +8,10 @@ const LOADING_TIPS = [
   "Tip: Ask Sarah if you should clock out while eating a meal after your shift.",
   "Tip: Hit your vape in the main dining area.",
   "Fun Fact: You're encouraged to be on your phone at the host stand.",
+  "Tip: Don't flush the toilet in the employee bathroom. Actually don't flush any toilet at all.",
+  "Tip: Drop a plate when managers are having a bad day. The whole staff will work together to clean it up, promoting team cohesion in a process known as trauma bonding.",
+  "Fun Fact: Customers love it when you ask about their political leanings and agree with them.",
+  "Tip: Recommend a salad instead when a customer orders B&G.",
 ];
 
 function showLoadingScreen(targetUrl) {
