@@ -4,8 +4,13 @@
     "name": "Jam and Toast",
     "category": "Appetizers",
     "description": "House-made jam and grilled country toast.",
-    "ingredients": ["house-made jam", "grilled country toast"],
-    "allergens": ["gluten"],
+    "ingredients": [
+      "house-made jam",
+      "grilled country toast"
+    ],
+    "allergens": [
+      "gluten"
+    ],
     "notes": "(V). Sub gluten-free toast $3. Jam choices: strawberry vanilla balsamic, rosemary peach, huckleberry ($2 upcharge)."
   },
   {
@@ -13,8 +18,16 @@
     "name": "Mini House-Made Cinnamon Rolls",
     "category": "Appetizers",
     "description": "(1) or (3) freshly baked cinnamon rolls topped with caramel and toasted pecans.",
-    "ingredients": ["cinnamon rolls", "caramel", "toasted pecans"],
-    "allergens": ["gluten", "dairy", "nuts"],
+    "ingredients": [
+      "cinnamon rolls",
+      "caramel",
+      "toasted pecans"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
     "notes": "(V)."
   },
   {
@@ -22,8 +35,20 @@
     "name": "Stuffed French Toast",
     "category": "Appetizers",
     "description": "House-made brioche bread, stuffed with our jam infused mascarpone cream cheese. Topped with toasted almonds, house-made icing, honey butter, and powdered sugar.",
-    "ingredients": ["brioche", "jam-infused mascarpone", "toasted almonds", "house-made icing", "honey butter", "powdered sugar"],
-    "allergens": ["gluten", "dairy", "egg", "nuts"],
+    "ingredients": [
+      "brioche",
+      "jam-infused mascarpone",
+      "toasted almonds",
+      "house-made icing",
+      "honey butter",
+      "powdered sugar"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg",
+      "nuts"
+    ],
     "notes": "(V)."
   },
   {
@@ -31,8 +56,20 @@
     "name": "Breakfast Board",
     "category": "Appetizers",
     "description": "Cold-smoked salmon over country toast, served with chopped house-pickled veggies, soft-boiled eggs, slices of grilled country toast, house-made jam, and honey butter.",
-    "ingredients": ["cold-smoked salmon", "country toast", "house-pickled veggies", "soft-boiled eggs", "house-made jam", "honey butter"],
-    "allergens": ["fish", "gluten", "egg", "dairy"],
+    "ingredients": [
+      "cold-smoked salmon",
+      "country toast",
+      "house-pickled veggies",
+      "soft-boiled eggs",
+      "house-made jam",
+      "honey butter"
+    ],
+    "allergens": [
+      "fish",
+      "gluten",
+      "egg",
+      "dairy"
+    ],
     "notes": "If (GF) sub gluten-free toast $3."
   },
   {
@@ -40,8 +77,14 @@
     "name": "OG Biscuit & Gravy",
     "category": "Appetizers",
     "description": "House-made buttermilk biscuit topped with sausage gravy.",
-    "ingredients": ["buttermilk biscuit", "sausage gravy"],
-    "allergens": ["gluten", "dairy"],
+    "ingredients": [
+      "buttermilk biscuit",
+      "sausage gravy"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
     "notes": "If (GF) sub gluten-free toast $3."
   },
   {
@@ -49,18 +92,36 @@
     "name": "Avocado Toast",
     "category": "Appetizers",
     "description": "House-made guacamole, country toast, bacon lardons, roasted grape tomatoes, and 1 basted egg.",
-    "ingredients": ["guacamole", "country toast", "bacon lardons", "roasted grape tomatoes", "basted egg"],
-    "allergens": ["gluten", "egg"],
+    "ingredients": [
+      "guacamole",
+      "country toast",
+      "bacon lardons",
+      "roasted grape tomatoes",
+      "basted egg"
+    ],
+    "allergens": [
+      "gluten",
+      "egg"
+    ],
     "notes": "If (GF) sub gluten-free toast $3."
   },
-
   {
     "id": "cinnamon-roll-pancake",
     "name": "Cinnamon Roll Pancake",
     "category": "Pancakes",
     "description": "Cinnamon chip buttermilk pancake topped with cinnamon buttercream, caramel sauce, royal vanilla icing, and powdered sugar.",
-    "ingredients": ["cinnamon chip buttermilk pancake", "cinnamon buttercream", "caramel sauce", "royal vanilla icing", "powdered sugar"],
-    "allergens": ["gluten", "dairy", "egg"],
+    "ingredients": [
+      "cinnamon chip buttermilk pancake",
+      "cinnamon buttercream",
+      "caramel sauce",
+      "royal vanilla icing",
+      "powdered sugar"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
     "notes": "(V). If (GF) sub gluten-free pancake $2."
   },
   {
@@ -68,8 +129,20 @@
     "name": "Blueberry Ricotta Pancake",
     "category": "Pancakes",
     "description": "Buttermilk pancake topped with blueberry jam/sauce, blueberries, lemon-ricotta mascarpone, toasted almonds, and powdered sugar.",
-    "ingredients": ["buttermilk pancake", "blueberry jam", "blueberries", "lemon-ricotta mascarpone", "toasted almonds", "powdered sugar"],
-    "allergens": ["gluten", "dairy", "egg", "nuts"],
+    "ingredients": [
+      "buttermilk pancake",
+      "blueberry jam",
+      "blueberries",
+      "lemon-ricotta mascarpone",
+      "toasted almonds",
+      "powdered sugar"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg",
+      "nuts"
+    ],
     "notes": "(V). If (GF) sub gluten-free pancake $2."
   },
   {
@@ -77,8 +150,18 @@
     "name": "Peanut Butter Cup Pancake",
     "category": "Pancakes",
     "description": "Chocolate chip buttermilk pancake topped with whipped peanut butter sauce and honey butter, garnished with powdered sugar.",
-    "ingredients": ["chocolate chip buttermilk pancake", "whipped peanut butter sauce", "honey butter", "powdered sugar"],
-    "allergens": ["gluten", "dairy", "egg", "peanut"],
+    "ingredients": [
+      "chocolate chip buttermilk pancake",
+      "whipped peanut butter sauce",
+      "honey butter",
+      "powdered sugar"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg",
+      "peanut"
+    ],
     "notes": "(V). If (GF) sub gluten-free pancake $2."
   },
   {
@@ -86,8 +169,20 @@
     "name": "Banana Bread Crunch Pancake",
     "category": "Pancakes",
     "description": "Buttermilk pancake topped with bananas, caramel sauce, cinnamon butter, and our house-made granola, garnished with powdered sugar.",
-    "ingredients": ["buttermilk pancake", "bananas", "caramel sauce", "cinnamon butter", "house-made granola", "powdered sugar"],
-    "allergens": ["gluten", "dairy", "egg", "nuts"],
+    "ingredients": [
+      "buttermilk pancake",
+      "bananas",
+      "caramel sauce",
+      "cinnamon butter",
+      "house-made granola",
+      "powdered sugar"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg",
+      "nuts"
+    ],
     "notes": "(V). Granola contains nuts and is NOT gluten-free. If (GF) sub gluten-free pancake $2 and bowl of granola."
   },
   {
@@ -95,8 +190,19 @@
     "name": "Coconut Banana Pancake",
     "category": "Pancakes",
     "description": "Gluten-free flour, ground flax, coconut and almond milk pancake, topped with toasted coconut, sliced bananas, honey, and powdered sugar.",
-    "ingredients": ["gluten-free flour", "ground flax", "coconut milk", "almond milk", "toasted coconut", "bananas", "honey", "powdered sugar"],
-    "allergens": ["nuts"],
+    "ingredients": [
+      "gluten-free flour",
+      "ground flax",
+      "coconut milk",
+      "almond milk",
+      "toasted coconut",
+      "bananas",
+      "honey",
+      "powdered sugar"
+    ],
+    "allergens": [
+      "nuts"
+    ],
     "notes": "(GF) (V). Comes gluten-free by default."
   },
   {
@@ -104,8 +210,19 @@
     "name": "Strawberry Shortcake Pancake",
     "category": "Pancakes",
     "description": "Buttermilk pancake topped with fresh strawberries, jam-infused mascarpone, strawberry gastrique, house-made shortcake crumble, and powdered sugar.",
-    "ingredients": ["buttermilk pancake", "strawberries", "jam-infused mascarpone", "strawberry gastrique", "shortcake crumble", "powdered sugar"],
-    "allergens": ["gluten", "dairy", "egg"],
+    "ingredients": [
+      "buttermilk pancake",
+      "strawberries",
+      "jam-infused mascarpone",
+      "strawberry gastrique",
+      "shortcake crumble",
+      "powdered sugar"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
     "notes": "(V). If (GF) sub gluten-free pancake $2."
   },
   {
@@ -113,8 +230,16 @@
     "name": "Plain Pancake",
     "category": "Pancakes",
     "description": "Classic buttermilk pancake served plain or with your choice of topping. Topped with butter, served with house-made syrup.",
-    "ingredients": ["buttermilk pancake", "butter", "house-made syrup"],
-    "allergens": ["gluten", "dairy", "egg"],
+    "ingredients": [
+      "buttermilk pancake",
+      "butter",
+      "house-made syrup"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
     "notes": "(V). If (GF) sub gluten-free pancake $1."
   },
   {
@@ -131,17 +256,40 @@
     "name": "Optional Pancake Toppings",
     "category": "Pancakes",
     "description": "12 optional pancake toppings.",
-    "ingredients": ["bananas", "cinnamon chips", "strawberries", "blueberries", "chocolate chips", "honey butter", "walnuts", "caramel", "lemon ricotta", "toasted coconut", "peanut butter", "caramel sauce"],
+    "ingredients": [
+      "bananas",
+      "cinnamon chips",
+      "strawberries",
+      "blueberries",
+      "chocolate chips",
+      "honey butter",
+      "walnuts",
+      "caramel",
+      "lemon ricotta",
+      "toasted coconut",
+      "peanut butter",
+      "caramel sauce"
+    ],
     "notes": "Any pancake style can be made gluten-free (remember granola is NOT GF for the Banana Bread Crunch)."
   },
-
   {
     "id": "biscuits-and-gravy-feature",
     "name": "Biscuits & Gravy",
     "category": "Breakfast Features",
     "description": "House-made buttermilk biscuits and sausage gravy, topped with chopped bacon and 2 basted eggs, served with hashbrowns and citrus arugula.",
-    "ingredients": ["buttermilk biscuits", "sausage gravy", "chopped bacon", "basted eggs", "hashbrowns", "citrus arugula"],
-    "allergens": ["gluten", "dairy", "egg"],
+    "ingredients": [
+      "buttermilk biscuits",
+      "sausage gravy",
+      "chopped bacon",
+      "basted eggs",
+      "hashbrowns",
+      "citrus arugula"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
     "notes": "If (GF) sub toast $3, no gravy."
   },
   {
@@ -149,8 +297,19 @@
     "name": "A.M. Aussie",
     "category": "Breakfast Features",
     "description": "2 soft poached eggs, toast, and avocado. Served with walnut-herb pesto and citrus arugula.",
-    "ingredients": ["soft poached eggs", "toast", "avocado", "walnut-herb pesto", "citrus arugula"],
-    "allergens": ["gluten", "egg", "nuts", "dairy"],
+    "ingredients": [
+      "soft poached eggs",
+      "toast",
+      "avocado",
+      "walnut-herb pesto",
+      "citrus arugula"
+    ],
+    "allergens": [
+      "gluten",
+      "egg",
+      "nuts",
+      "dairy"
+    ],
     "notes": "(V). If (GF) sub toast $3."
   },
   {
@@ -158,8 +317,18 @@
     "name": "Red Chili & Corned Beef Hash",
     "category": "Breakfast Features",
     "description": "Slow-cooked Bourbon Amber-braised Black Angus Choice corned beef in a moderately spiced hash, topped with 2 soft poached eggs, served with citrus arugula and house-made grilled country toast.",
-    "ingredients": ["corned beef", "bourbon amber braising liquid", "spiced hash", "soft poached eggs", "citrus arugula", "country toast"],
-    "allergens": ["gluten", "egg"],
+    "ingredients": [
+      "corned beef",
+      "bourbon amber braising liquid",
+      "spiced hash",
+      "soft poached eggs",
+      "citrus arugula",
+      "country toast"
+    ],
+    "allergens": [
+      "gluten",
+      "egg"
+    ],
     "notes": "If (GF) sub gluten-free toast $3."
   },
   {
@@ -167,8 +336,20 @@
     "name": "Breakfast Sammie",
     "category": "Breakfast Features",
     "description": "Basted egg, sausage patty, fumella, chopped bacon, and citrus arugula on a local English muffin. Served with hashbrowns.",
-    "ingredients": ["basted egg", "sausage patty", "fumella (smoked mozzarella)", "chopped bacon", "citrus arugula", "English muffin", "hashbrowns"],
-    "allergens": ["gluten", "dairy", "egg"],
+    "ingredients": [
+      "basted egg",
+      "sausage patty",
+      "fumella (smoked mozzarella)",
+      "chopped bacon",
+      "citrus arugula",
+      "English muffin",
+      "hashbrowns"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
     "notes": "If (GF) sub local gluten-free English muffin $3."
   },
   {
@@ -176,8 +357,20 @@
     "name": "Roasted Beet & Root Hash",
     "category": "Breakfast Features",
     "description": "Roasted red and golden beets, heirloom potato medley, seasonal mushrooms, and house-made spiced italian sausage on a layer of citrus arugula and house-made grilled country toast, served with 2 soft poached eggs.",
-    "ingredients": ["red beets", "golden beets", "heirloom potatoes", "seasonal mushrooms", "italian sausage", "citrus arugula", "country toast", "soft poached eggs"],
-    "allergens": ["gluten", "egg"],
+    "ingredients": [
+      "red beets",
+      "golden beets",
+      "heirloom potatoes",
+      "seasonal mushrooms",
+      "italian sausage",
+      "citrus arugula",
+      "country toast",
+      "soft poached eggs"
+    ],
+    "allergens": [
+      "gluten",
+      "egg"
+    ],
     "notes": "(V option without sausage). If (GF) sub gluten-free toast $3."
   },
   {
@@ -185,8 +378,21 @@
     "name": "Loaded Hash Browns",
     "category": "Breakfast Features",
     "description": "2 basted eggs atop hash browns, chopped bacon, grilled fresh jalapenos, smoked mozzarella cheese, and sausage gravy, served with citrus arugula and house-made grilled country toast.",
-    "ingredients": ["basted eggs", "hash browns", "chopped bacon", "jalapenos", "smoked mozzarella", "sausage gravy", "citrus arugula", "country toast"],
-    "allergens": ["gluten", "dairy", "egg"],
+    "ingredients": [
+      "basted eggs",
+      "hash browns",
+      "chopped bacon",
+      "jalapenos",
+      "smoked mozzarella",
+      "sausage gravy",
+      "citrus arugula",
+      "country toast"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
     "notes": "If (GF) sub gluten-free toast $3, no gravy."
   },
   {
@@ -194,8 +400,23 @@
     "name": "Huevos Rancheros",
     "category": "Breakfast Features",
     "description": "Trevino's (local Billings) corn flour tortillas, refried black beans, smoked mozzarella, chili verde, 2 basted eggs, ranchero sauce, cilantro lime crema, pico de gallo, and cotija cheese. Served with citrus arugula and hashbrowns.",
-    "ingredients": ["corn flour tortillas", "refried black beans", "smoked mozzarella", "chili verde", "basted eggs", "ranchero sauce", "cilantro lime crema", "pico de gallo", "cotija cheese", "citrus arugula", "hashbrowns"],
-    "allergens": ["dairy", "egg"],
+    "ingredients": [
+      "corn flour tortillas",
+      "refried black beans",
+      "smoked mozzarella",
+      "chili verde",
+      "basted eggs",
+      "ranchero sauce",
+      "cilantro lime crema",
+      "pico de gallo",
+      "cotija cheese",
+      "citrus arugula",
+      "hashbrowns"
+    ],
+    "allergens": [
+      "dairy",
+      "egg"
+    ],
     "notes": "If (GF) sub GF corn tortillas $1."
   },
   {
@@ -203,8 +424,24 @@
     "name": "Breakfast Burrito",
     "category": "Breakfast Features",
     "description": "Refried black beans, scrambled eggs, hash browns, sausage gravy, smoked pork shoulder, and pork chili verde rolled in a flour tortilla, topped with cilantro lime crema, pico de gallo, and cotija cheese. Served with citrus arugula.",
-    "ingredients": ["refried black beans", "scrambled eggs", "hash browns", "sausage gravy", "smoked pork shoulder", "pork chili verde", "flour tortilla", "cilantro lime crema", "pico de gallo", "cotija cheese", "citrus arugula"],
-    "allergens": ["gluten", "dairy", "egg"],
+    "ingredients": [
+      "refried black beans",
+      "scrambled eggs",
+      "hash browns",
+      "sausage gravy",
+      "smoked pork shoulder",
+      "pork chili verde",
+      "flour tortilla",
+      "cilantro lime crema",
+      "pico de gallo",
+      "cotija cheese",
+      "citrus arugula"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
     "notes": ""
   },
   {
@@ -212,8 +449,16 @@
     "name": "Traditional",
     "category": "Breakfast Features",
     "description": "2 eggs served your way, 2 slices of slab bacon, hash browns, and house-made grilled country toast.",
-    "ingredients": ["eggs", "slab bacon", "hash browns", "country toast"],
-    "allergens": ["gluten", "egg"],
+    "ingredients": [
+      "eggs",
+      "slab bacon",
+      "hash browns",
+      "country toast"
+    ],
+    "allergens": [
+      "gluten",
+      "egg"
+    ],
     "notes": "If (GF) sub GF toast $3."
   },
   {
@@ -221,18 +466,40 @@
     "name": "Grazi's Granola",
     "category": "Breakfast Features",
     "description": "Almonds, walnuts, rolled oats, dried Montana fruit, and toasted coconut. Served with fresh berries and whole milk.",
-    "ingredients": ["almonds", "walnuts", "rolled oats", "dried fruit", "toasted coconut", "fresh berries", "whole milk"],
-    "allergens": ["nuts", "dairy", "gluten (oats)"],
+    "ingredients": [
+      "almonds",
+      "walnuts",
+      "rolled oats",
+      "dried fruit",
+      "toasted coconut",
+      "fresh berries",
+      "whole milk"
+    ],
+    "allergens": [
+      "nuts",
+      "dairy",
+      "gluten (oats)"
+    ],
     "notes": "(V). Sub soy, almond, coconut, or oat milk $1.50. Add Greek plain yogurt $4."
   },
-
   {
     "id": "benedict-basic",
     "name": "Basic Benedict",
     "category": "Benedicts",
     "description": "Seared maple-glazed ham on local English muffins, 2 poached easy eggs and hollandaise, served with hashbrowns and citrus arugula.",
-    "ingredients": ["maple-glazed ham", "English muffins", "poached eggs", "hollandaise", "hashbrowns", "citrus arugula"],
-    "allergens": ["gluten", "dairy", "egg"],
+    "ingredients": [
+      "maple-glazed ham",
+      "English muffins",
+      "poached eggs",
+      "hollandaise",
+      "hashbrowns",
+      "citrus arugula"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
     "notes": "Available half or full. If (GF) sub local gluten-free English muffin $2 / $3.50."
   },
   {
@@ -240,8 +507,23 @@
     "name": "Chicken & Biscuit Benedict",
     "category": "Benedicts",
     "description": "Cornmeal-crusted buttermilk fried chicken breast, house-made buttermilk biscuits, maple syrup, sausage gravy, Tabasco, and microgreen leeks. 2 soft poached eggs and hollandaise. Served with citrus arugula and hashbrowns.",
-    "ingredients": ["fried chicken breast", "buttermilk biscuits", "maple syrup", "sausage gravy", "Tabasco", "microgreen leeks", "soft poached eggs", "hollandaise", "citrus arugula", "hashbrowns"],
-    "allergens": ["gluten", "dairy", "egg"],
+    "ingredients": [
+      "fried chicken breast",
+      "buttermilk biscuits",
+      "maple syrup",
+      "sausage gravy",
+      "Tabasco",
+      "microgreen leeks",
+      "soft poached eggs",
+      "hollandaise",
+      "citrus arugula",
+      "hashbrowns"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
     "notes": "If (GF) sub local gluten-free English muffin $2 / $3.50, no gravy."
   },
   {
@@ -249,8 +531,22 @@
     "name": "Crab Cake Benedict",
     "category": "Benedicts",
     "description": "Fried lump crab cakes, guacamole, English muffins, 2 poached easy eggs, hollandaise, and microgreen leeks. Served with citrus arugula and hashbrowns.",
-    "ingredients": ["lump crab cakes", "guacamole", "English muffins", "poached eggs", "hollandaise", "microgreen leeks", "citrus arugula", "hashbrowns"],
-    "allergens": ["gluten", "dairy", "egg", "shellfish"],
+    "ingredients": [
+      "lump crab cakes",
+      "guacamole",
+      "English muffins",
+      "poached eggs",
+      "hollandaise",
+      "microgreen leeks",
+      "citrus arugula",
+      "hashbrowns"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg",
+      "shellfish"
+    ],
     "notes": "If (GF) sub local gluten-free English muffin $2 / $3.50."
   },
   {
@@ -258,9 +554,23 @@
     "name": "Mia Benedict",
     "category": "Benedicts",
     "description": "House-made grilled country toast, roasted roma tomato, fresh mozzarella, balsamic reduction, and microgreen basil, 2 soft poached eggs and hollandaise, served with citrus arugula and hashbrowns.",
-    "ingredients": ["country toast", "roasted roma tomato", "fresh mozzarella", "balsamic reduction", "microgreen basil", "soft poached eggs", "hollandaise", "citrus arugula", "hashbrowns"],
-    "allergens": ["gluten", "dairy", "egg"],
-    "notes": "(V). If (GF) add gluten-free toast $2/$3. Great upsell — add prosciutto $3 or avocado $3.75."
+    "ingredients": [
+      "country toast",
+      "roasted roma tomato",
+      "fresh mozzarella",
+      "balsamic reduction",
+      "microgreen basil",
+      "soft poached eggs",
+      "hollandaise",
+      "citrus arugula",
+      "hashbrowns"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
+    "notes": "(V). If (GF) add gluten-free toast $2/$3. Great upsell \u2014 add prosciutto $3 or avocado $3.75."
   },
   {
     "id": "benedict-substitutions",
@@ -270,14 +580,26 @@
     "ingredients": [],
     "notes": "Any other substitutions are an ADD price. If customer becomes upset, see manager."
   },
-
   {
     "id": "omelet-pulled-pork",
     "name": "Pulled Pork Omelet",
     "category": "Omelets",
     "description": "Four-egg omelet with smoked pork shoulder, smoked mozzarella and cotija cheese, pork chili verde, pico de gallo, and cilantro lime crema. Served with citrus arugula and hashbrowns.",
-    "ingredients": ["four-egg omelet", "smoked pork shoulder", "smoked mozzarella", "cotija cheese", "pork chili verde", "pico de gallo", "cilantro lime crema", "citrus arugula", "hashbrowns"],
-    "allergens": ["dairy", "egg"],
+    "ingredients": [
+      "four-egg omelet",
+      "smoked pork shoulder",
+      "smoked mozzarella",
+      "cotija cheese",
+      "pork chili verde",
+      "pico de gallo",
+      "cilantro lime crema",
+      "citrus arugula",
+      "hashbrowns"
+    ],
+    "allergens": [
+      "dairy",
+      "egg"
+    ],
     "notes": "If (GF) sub gluten-free toast $3."
   },
   {
@@ -285,8 +607,22 @@
     "name": "Roasted Vegetable Omelet",
     "category": "Omelets",
     "description": "Four-egg omelet with roasted seasonal mushrooms, spinach, fresh heirloom grape tomatoes, caramelized onion, chevre, and walnut-herb pesto. Served with hashbrowns and citrus arugula.",
-    "ingredients": ["four-egg omelet", "seasonal mushrooms", "spinach", "heirloom grape tomatoes", "caramelized onion", "chevre", "walnut-herb pesto", "hashbrowns", "citrus arugula"],
-    "allergens": ["dairy", "egg", "nuts"],
+    "ingredients": [
+      "four-egg omelet",
+      "seasonal mushrooms",
+      "spinach",
+      "heirloom grape tomatoes",
+      "caramelized onion",
+      "chevre",
+      "walnut-herb pesto",
+      "hashbrowns",
+      "citrus arugula"
+    ],
+    "allergens": [
+      "dairy",
+      "egg",
+      "nuts"
+    ],
     "notes": "(V). If (GF) sub gluten-free toast $3."
   },
   {
@@ -294,8 +630,20 @@
     "name": "Ham and Swiss Omelet",
     "category": "Omelets",
     "description": "Four-egg omelet with applewood smoked ham, caramelized onions, and Swiss cheese. Topped with house-made hollandaise and microgreen leeks. Served with hashbrowns and citrus arugula.",
-    "ingredients": ["four-egg omelet", "applewood smoked ham", "caramelized onions", "Swiss cheese", "hollandaise", "microgreen leeks", "hashbrowns", "citrus arugula"],
-    "allergens": ["dairy", "egg"],
+    "ingredients": [
+      "four-egg omelet",
+      "applewood smoked ham",
+      "caramelized onions",
+      "Swiss cheese",
+      "hollandaise",
+      "microgreen leeks",
+      "hashbrowns",
+      "citrus arugula"
+    ],
+    "allergens": [
+      "dairy",
+      "egg"
+    ],
     "notes": "If (GF) sub gluten-free toast $3."
   },
   {
@@ -314,31 +662,52 @@
     "ingredients": [],
     "notes": "Used in the Breakfast Sammie."
   },
-
   {
     "id": "house-salad",
     "name": "House Salad",
     "category": "Lunch",
     "description": "Spicy mixed greens, grape tomatoes, and house-made croutons in a citrus vinaigrette.",
-    "ingredients": ["mixed greens", "grape tomatoes", "house-made croutons", "citrus vinaigrette"],
-    "allergens": ["gluten"],
-    "notes": "(V). Great upsell — add pulled pork, Philly meat, or chicken Philly meat."
+    "ingredients": [
+      "mixed greens",
+      "grape tomatoes",
+      "house-made croutons",
+      "citrus vinaigrette"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "notes": "(V). Great upsell \u2014 add pulled pork, Philly meat, or chicken Philly meat."
   },
   {
     "id": "kobb-salad",
     "name": "Kobb Salad",
     "category": "Lunch",
     "description": "Mixed greens, avocado, grape tomatoes, chopped bacon, hard-boiled egg, and house-made croutons. Served with our signature ranch dressing.",
-    "ingredients": ["mixed greens", "avocado", "grape tomatoes", "chopped bacon", "hard-boiled egg", "croutons", "ranch dressing"],
-    "allergens": ["gluten", "dairy", "egg"],
-    "notes": "Great upsell — add pulled pork, Philly meat, or chicken Philly meat."
+    "ingredients": [
+      "mixed greens",
+      "avocado",
+      "grape tomatoes",
+      "chopped bacon",
+      "hard-boiled egg",
+      "croutons",
+      "ranch dressing"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
+    "notes": "Great upsell \u2014 add pulled pork, Philly meat, or chicken Philly meat."
   },
   {
     "id": "soup-of-the-day",
     "name": "Soup of the Day",
     "category": "Lunch",
     "description": "Roasted Tomato and Basil.",
-    "ingredients": ["roasted tomato", "basil"],
+    "ingredients": [
+      "roasted tomato",
+      "basil"
+    ],
     "allergens": [],
     "notes": ""
   },
@@ -347,8 +716,15 @@
     "name": "Grilled Cheese",
     "category": "Lunch",
     "description": "House-made country bread with American and Jack cheese.",
-    "ingredients": ["country bread", "American cheese", "Jack cheese"],
-    "allergens": ["gluten", "dairy"],
+    "ingredients": [
+      "country bread",
+      "American cheese",
+      "Jack cheese"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
     "notes": "(V). Served with French fries, house salad, or a cup of soup ($2)."
   },
   {
@@ -356,8 +732,16 @@
     "name": "BLT",
     "category": "Lunch",
     "description": "Slab bacon, tomato, basil, and arugula on our house-made country toast.",
-    "ingredients": ["slab bacon", "tomato", "basil", "arugula", "country toast"],
-    "allergens": ["gluten"],
+    "ingredients": [
+      "slab bacon",
+      "tomato",
+      "basil",
+      "arugula",
+      "country toast"
+    ],
+    "allergens": [
+      "gluten"
+    ],
     "notes": "Served with French fries, house salad, or cup of soup ($2)."
   },
   {
@@ -365,8 +749,17 @@
     "name": "Philly Cheesesteak",
     "category": "Lunch",
     "description": "8oz shaved ribeye, provolone and American cheese, and onions on a house-made hoagie roll.",
-    "ingredients": ["shaved ribeye", "provolone", "American cheese", "onions", "hoagie roll"],
-    "allergens": ["gluten", "dairy"],
+    "ingredients": [
+      "shaved ribeye",
+      "provolone",
+      "American cheese",
+      "onions",
+      "hoagie roll"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
     "notes": "Served with French fries, house salad, or a cup of soup ($2)."
   },
   {
@@ -374,8 +767,17 @@
     "name": "Chicken Philly Cheesesteak",
     "category": "Lunch",
     "description": "8oz shaved chicken breast, provolone and American cheese, and onions on a house-made hoagie roll.",
-    "ingredients": ["shaved chicken breast", "provolone", "American cheese", "onions", "hoagie roll"],
-    "allergens": ["gluten", "dairy"],
+    "ingredients": [
+      "shaved chicken breast",
+      "provolone",
+      "American cheese",
+      "onions",
+      "hoagie roll"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
     "notes": "Served with French fries, house salad, or cup of soup ($2)."
   },
   {
@@ -383,8 +785,17 @@
     "name": "Pulled Pork Tacos",
     "category": "Lunch",
     "description": "Two local corn-flour tortillas, house-smoked pulled pork, green chili verde, jack cheese, cilantro lime crema, and pico de gallo.",
-    "ingredients": ["corn-flour tortillas", "smoked pulled pork", "green chili verde", "jack cheese", "cilantro lime crema", "pico de gallo"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "corn-flour tortillas",
+      "smoked pulled pork",
+      "green chili verde",
+      "jack cheese",
+      "cilantro lime crema",
+      "pico de gallo"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "Can be (GF) with GF tortillas ($1). Served with French fries, house salad, or cup of soup ($2)."
   },
   {
@@ -392,8 +803,18 @@
     "name": "Margherita",
     "category": "Lunch",
     "description": "6oz shaved chicken breast, fresh mozzarella, oven-roasted tomatoes, herbed olive oil, basil pesto, and balsamic reduction (cold).",
-    "ingredients": ["shaved chicken breast", "fresh mozzarella", "oven-roasted tomatoes", "herbed olive oil", "basil pesto", "balsamic reduction"],
-    "allergens": ["dairy", "nuts"],
+    "ingredients": [
+      "shaved chicken breast",
+      "fresh mozzarella",
+      "oven-roasted tomatoes",
+      "herbed olive oil",
+      "basil pesto",
+      "balsamic reduction"
+    ],
+    "allergens": [
+      "dairy",
+      "nuts"
+    ],
     "notes": "Pesto contains parmesan cheese. Served with French fries (fried in beef tallow), house salad, or cup of soup."
   },
   {
@@ -401,8 +822,18 @@
     "name": "Gamecock",
     "category": "Lunch",
     "description": "8oz shaved ribeye, provolone and American cheese, applewood bacon, onions, and grilled jalapenos.",
-    "ingredients": ["shaved ribeye", "provolone", "American cheese", "applewood bacon", "onions", "grilled jalapenos"],
-    "allergens": ["gluten", "dairy"],
+    "ingredients": [
+      "shaved ribeye",
+      "provolone",
+      "American cheese",
+      "applewood bacon",
+      "onions",
+      "grilled jalapenos"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
     "notes": "Served with French fries, house salad, or a cup of soup ($2)."
   },
   {
@@ -410,8 +841,18 @@
     "name": "Cubano",
     "category": "Lunch",
     "description": "House-smoked pulled pork, shaved ham, Swiss cheese, house-made pickles, and house mustard blend on a grilled hoagie roll.",
-    "ingredients": ["smoked pulled pork", "shaved ham", "Swiss cheese", "house pickles", "house mustard", "hoagie roll"],
-    "allergens": ["gluten", "dairy"],
+    "ingredients": [
+      "smoked pulled pork",
+      "shaved ham",
+      "Swiss cheese",
+      "house pickles",
+      "house mustard",
+      "hoagie roll"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
     "notes": "Served with French fries, house salad, or cup of soup ($2)."
   },
   {
@@ -419,18 +860,40 @@
     "name": "Mary Moo",
     "category": "Lunch",
     "description": "Red and golden beets, seasonal mushrooms, caramelized onions, heirloom tomatoes, spinach, walnut-herb pesto, and chevre in a flour tortilla.",
-    "ingredients": ["red beets", "golden beets", "seasonal mushrooms", "caramelized onions", "heirloom tomatoes", "spinach", "walnut-herb pesto", "chevre", "flour tortilla"],
-    "allergens": ["gluten", "dairy", "nuts"],
+    "ingredients": [
+      "red beets",
+      "golden beets",
+      "seasonal mushrooms",
+      "caramelized onions",
+      "heirloom tomatoes",
+      "spinach",
+      "walnut-herb pesto",
+      "chevre",
+      "flour tortilla"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
     "notes": "(V). Served with French fries, house salad, or a cup of soup ($2)."
   },
-
   {
     "id": "kids-traditional",
     "name": "Kids Traditional",
     "category": "Kids Menu",
     "description": "1 plain pancake with syrup, 1 slab bacon, and 1 egg served their way.",
-    "ingredients": ["plain pancake", "syrup", "slab bacon", "egg"],
-    "allergens": ["gluten", "dairy", "egg"],
+    "ingredients": [
+      "plain pancake",
+      "syrup",
+      "slab bacon",
+      "egg"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
     "notes": "Breakfast item."
   },
   {
@@ -438,8 +901,15 @@
     "name": "Kids Pancake",
     "category": "Kids Menu",
     "description": "Kid-sized buttermilk pancake with house syrup.",
-    "ingredients": ["buttermilk pancake", "house syrup"],
-    "allergens": ["gluten", "dairy", "egg"],
+    "ingredients": [
+      "buttermilk pancake",
+      "house syrup"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "egg"
+    ],
     "notes": "Sub a specialty pancake $2. Available GF $1."
   },
   {
@@ -447,26 +917,45 @@
     "name": "Kids Scramble",
     "category": "Kids Menu",
     "description": "1 egg (served their way) with smoked mozzarella and hashbrowns.",
-    "ingredients": ["egg", "smoked mozzarella", "hashbrowns"],
-    "allergens": ["dairy", "egg"],
-    "notes": "Great upsell — add bacon or ham."
+    "ingredients": [
+      "egg",
+      "smoked mozzarella",
+      "hashbrowns"
+    ],
+    "allergens": [
+      "dairy",
+      "egg"
+    ],
+    "notes": "Great upsell \u2014 add bacon or ham."
   },
   {
     "id": "kids-grilled-cheese",
     "name": "Kids Grilled Cheese Sandwich",
     "category": "Kids Menu",
     "description": "House-made country toast with smoked mozzarella cheese. Served with French fries.",
-    "ingredients": ["country toast", "smoked mozzarella", "French fries"],
-    "allergens": ["gluten", "dairy"],
-    "notes": "Lunch (Mon-Fri 11:30-3pm). Great upsell — add ham or bacon."
+    "ingredients": [
+      "country toast",
+      "smoked mozzarella",
+      "French fries"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "notes": "Lunch (Mon-Fri 11:30-3pm). Great upsell \u2014 add ham or bacon."
   },
   {
     "id": "kids-chicken-strips",
     "name": "Kids Chicken Strips",
     "category": "Kids Menu",
     "description": "Three chicken strips served with French fries.",
-    "ingredients": ["chicken strips", "French fries"],
-    "allergens": ["gluten"],
+    "ingredients": [
+      "chicken strips",
+      "French fries"
+    ],
+    "allergens": [
+      "gluten"
+    ],
     "notes": "Lunch (Mon-Fri 11:30-3pm)."
   },
   {
@@ -474,11 +963,18 @@
     "name": "Kids P.B. and Jam Sandwich",
     "category": "Kids Menu",
     "description": "House-made country toast with house-made peanut butter sauce and strawberry jam. Served with French fries.",
-    "ingredients": ["country toast", "peanut butter sauce", "strawberry jam", "French fries"],
-    "allergens": ["gluten", "peanut"],
+    "ingredients": [
+      "country toast",
+      "peanut butter sauce",
+      "strawberry jam",
+      "French fries"
+    ],
+    "allergens": [
+      "gluten",
+      "peanut"
+    ],
     "notes": "Lunch (Mon-Fri 11:30-3pm)."
   },
-
   {
     "id": "sourcing-tortillas",
     "name": "Tortillas Sourcing",
@@ -521,7 +1017,6 @@
     "description": "Drip and espresso coffee come from Rockford in Bozeman, MT. Style: Medium Roast Guatemalan Blend.",
     "ingredients": []
   },
-
   {
     "id": "na-pepsi",
     "name": "Pepsi Products",
@@ -541,7 +1036,10 @@
     "name": "Arnold Palmer",
     "category": "N/A Beverages",
     "description": "Half iced tea, half lemonade.",
-    "ingredients": ["iced tea", "lemonade"]
+    "ingredients": [
+      "iced tea",
+      "lemonade"
+    ]
   },
   {
     "id": "na-chocolate-milk",
@@ -549,7 +1047,9 @@
     "category": "N/A Beverages",
     "description": "Chocolate milk.",
     "ingredients": [],
-    "allergens": ["dairy"]
+    "allergens": [
+      "dairy"
+    ]
   },
   {
     "id": "na-white-milk",
@@ -557,80 +1057,106 @@
     "category": "N/A Beverages",
     "description": "White milk.",
     "ingredients": [],
-    "allergens": ["dairy"]
+    "allergens": [
+      "dairy"
+    ]
   },
-
   {
     "id": "juice-orange",
     "name": "Fresh Squeezed Orange Juice",
     "category": "Juices",
     "description": "Fresh squeezed orange juice.",
-    "ingredients": ["orange"]
+    "ingredients": [
+      "orange"
+    ]
   },
   {
     "id": "juice-grapefruit",
     "name": "Fresh Squeezed Grapefruit Juice",
     "category": "Juices",
     "description": "Fresh squeezed grapefruit juice.",
-    "ingredients": ["grapefruit"]
+    "ingredients": [
+      "grapefruit"
+    ]
   },
   {
     "id": "juice-jam",
     "name": "Jam! Juice",
     "category": "Juices",
     "description": "Fresh squeezed orange and grapefruit juice mixed.",
-    "ingredients": ["orange", "grapefruit"]
+    "ingredients": [
+      "orange",
+      "grapefruit"
+    ]
   },
   {
     "id": "juice-cranberry",
     "name": "Cranberry Juice",
     "category": "Juices",
     "description": "Cranberry juice.",
-    "ingredients": ["cranberry"]
+    "ingredients": [
+      "cranberry"
+    ]
   },
   {
     "id": "juice-apple",
     "name": "Apple Juice",
     "category": "Juices",
     "description": "Apple juice.",
-    "ingredients": ["apple"]
+    "ingredients": [
+      "apple"
+    ]
   },
   {
     "id": "juice-pineapple",
     "name": "Pineapple Juice",
     "category": "Juices",
     "description": "Pineapple juice.",
-    "ingredients": ["pineapple"]
+    "ingredients": [
+      "pineapple"
+    ]
   },
   {
     "id": "juice-tomato",
     "name": "Tomato Juice",
     "category": "Juices",
     "description": "Tomato juice.",
-    "ingredients": ["tomato"]
+    "ingredients": [
+      "tomato"
+    ]
   },
   {
     "id": "juice-clamato",
     "name": "Clamato",
     "category": "Juices",
     "description": "Clamato (tomato and clam juice blend).",
-    "ingredients": ["tomato", "clam broth"],
-    "allergens": ["shellfish"]
+    "ingredients": [
+      "tomato",
+      "clam broth"
+    ],
+    "allergens": [
+      "shellfish"
+    ]
   },
   {
     "id": "juice-lemonade",
     "name": "Lemonade",
     "category": "Juices",
     "description": "Lemonade.",
-    "ingredients": ["lemon", "sugar", "water"]
+    "ingredients": [
+      "lemon",
+      "sugar",
+      "water"
+    ]
   },
-
   {
     "id": "espresso-shot",
     "name": "Espresso",
     "category": "Espresso",
     "description": "Dark roast, full flavored. 2 shots.",
-    "ingredients": ["espresso"],
+    "ingredients": [
+      "espresso"
+    ],
     "notes": "Extra shot $2."
   },
   {
@@ -638,15 +1164,23 @@
     "name": "Cafe Au Lait",
     "category": "Espresso",
     "description": "Drip coffee and steamed milk. 16oz.",
-    "ingredients": ["drip coffee", "steamed milk"],
-    "allergens": ["dairy"]
+    "ingredients": [
+      "drip coffee",
+      "steamed milk"
+    ],
+    "allergens": [
+      "dairy"
+    ]
   },
   {
     "id": "americano",
     "name": "Americano",
     "category": "Espresso",
     "description": "Espresso and hot water.",
-    "ingredients": ["espresso", "hot water"],
+    "ingredients": [
+      "espresso",
+      "hot water"
+    ],
     "notes": "Sizes: 8oz, 12oz, 16oz."
   },
   {
@@ -654,16 +1188,29 @@
     "name": "Macchiato",
     "category": "Espresso",
     "description": "Espresso marked with a small dollop of micro foam. Shot glass 4.5 oz.",
-    "ingredients": ["espresso", "micro foam"],
-    "allergens": ["dairy"]
+    "ingredients": [
+      "espresso",
+      "micro foam"
+    ],
+    "allergens": [
+      "dairy"
+    ]
   },
   {
     "id": "starbucks-macchiato",
     "name": "Starbucks Macchiato",
     "category": "Espresso",
     "description": "Caramel sauce, vanilla syrup, espresso, steamed whole milk, and whipped cream.",
-    "ingredients": ["caramel sauce", "vanilla syrup", "espresso", "steamed whole milk", "whipped cream"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "caramel sauce",
+      "vanilla syrup",
+      "espresso",
+      "steamed whole milk",
+      "whipped cream"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "Sizes: 8oz, 12oz, 16oz."
   },
   {
@@ -671,8 +1218,13 @@
     "name": "Latte",
     "category": "Espresso",
     "description": "Espresso and steamed milk.",
-    "ingredients": ["espresso", "steamed milk"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "espresso",
+      "steamed milk"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "Sizes: 8oz, 12oz, 16oz."
   },
   {
@@ -680,8 +1232,13 @@
     "name": "Breve",
     "category": "Espresso",
     "description": "Espresso and steamed half-and-half.",
-    "ingredients": ["espresso", "steamed half-and-half"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "espresso",
+      "steamed half-and-half"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "Sizes: 8oz, 12oz, 16oz."
   },
   {
@@ -689,32 +1246,56 @@
     "name": "Cappuccino",
     "category": "Espresso",
     "description": "Espresso, steamed milk, and micro foam. 8oz.",
-    "ingredients": ["espresso", "steamed milk", "micro foam"],
-    "allergens": ["dairy"]
+    "ingredients": [
+      "espresso",
+      "steamed milk",
+      "micro foam"
+    ],
+    "allergens": [
+      "dairy"
+    ]
   },
   {
     "id": "cortado",
     "name": "Cortado",
     "category": "Espresso",
-    "description": "Espresso and 2oz of steamed milk to 125°F. Shot glass 4.5 oz.",
-    "ingredients": ["espresso", "steamed milk"],
-    "allergens": ["dairy"]
+    "description": "Espresso and 2oz of steamed milk to 125\u00b0F. Shot glass 4.5 oz.",
+    "ingredients": [
+      "espresso",
+      "steamed milk"
+    ],
+    "allergens": [
+      "dairy"
+    ]
   },
   {
     "id": "bee-sting",
     "name": "Bee Sting",
     "category": "Espresso",
     "description": "Espresso, honey, cinnamon, and half-and-half, iced. 8oz.",
-    "ingredients": ["espresso", "honey", "cinnamon", "half-and-half"],
-    "allergens": ["dairy"]
+    "ingredients": [
+      "espresso",
+      "honey",
+      "cinnamon",
+      "half-and-half"
+    ],
+    "allergens": [
+      "dairy"
+    ]
   },
   {
     "id": "mocha",
     "name": "Mocha",
     "category": "Espresso",
     "description": "Espresso, Ghirardelli ground dark chocolate, and steamed milk.",
-    "ingredients": ["espresso", "Ghirardelli dark chocolate", "steamed milk"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "espresso",
+      "Ghirardelli dark chocolate",
+      "steamed milk"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "Sizes: 8oz, 12oz, 16oz."
   },
   {
@@ -722,8 +1303,13 @@
     "name": "White Chocolate Mocha",
     "category": "Espresso",
     "description": "White chocolate powder and steamed milk.",
-    "ingredients": ["white chocolate powder", "steamed milk"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "white chocolate powder",
+      "steamed milk"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "Sizes: 8oz, 12oz, 16oz."
   },
   {
@@ -731,8 +1317,14 @@
     "name": "Chai Latte",
     "category": "Espresso",
     "description": "Oregon Chai, cinnamon, and steamed milk.",
-    "ingredients": ["Oregon Chai", "cinnamon", "steamed milk"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "Oregon Chai",
+      "cinnamon",
+      "steamed milk"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "Sizes: 8oz, 12oz, 16oz."
   },
   {
@@ -740,8 +1332,15 @@
     "name": "Dirty Chai Latte",
     "category": "Espresso",
     "description": "Espresso, steamed milk, cinnamon, and real Vermont maple syrup.",
-    "ingredients": ["espresso", "steamed milk", "cinnamon", "Vermont maple syrup"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "espresso",
+      "steamed milk",
+      "cinnamon",
+      "Vermont maple syrup"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "Sizes: 8oz, 12oz, 16oz."
   },
   {
@@ -749,32 +1348,55 @@
     "name": "Maple Latte",
     "category": "Espresso",
     "description": "Espresso, steamed milk, and real Vermont maple syrup. 16oz.",
-    "ingredients": ["espresso", "steamed milk", "Vermont maple syrup"],
-    "allergens": ["dairy"]
+    "ingredients": [
+      "espresso",
+      "steamed milk",
+      "Vermont maple syrup"
+    ],
+    "allergens": [
+      "dairy"
+    ]
   },
   {
     "id": "tea-latte",
     "name": "Tea Latte",
     "category": "Espresso",
     "description": "Choice of Steep Mountain loose-leaf tea and steamed milk. 16oz.",
-    "ingredients": ["loose leaf tea", "steamed milk"],
-    "allergens": ["dairy"]
+    "ingredients": [
+      "loose leaf tea",
+      "steamed milk"
+    ],
+    "allergens": [
+      "dairy"
+    ]
   },
   {
     "id": "london-fog",
     "name": "London Fog",
     "category": "Espresso",
     "description": "Earl Grey tea latte with vanilla syrup and steamed milk.",
-    "ingredients": ["Earl Grey tea", "vanilla syrup", "steamed milk"],
-    "allergens": ["dairy"]
+    "ingredients": [
+      "Earl Grey tea",
+      "vanilla syrup",
+      "steamed milk"
+    ],
+    "allergens": [
+      "dairy"
+    ]
   },
   {
     "id": "hot-cocoa",
     "name": "Hot Cocoa",
     "category": "Espresso",
     "description": "Ghirardelli ground dark chocolate and steamed milk, topped with whipped cream.",
-    "ingredients": ["Ghirardelli dark chocolate", "steamed milk", "whipped cream"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "Ghirardelli dark chocolate",
+      "steamed milk",
+      "whipped cream"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "Sizes: 8oz, 12oz, 16oz."
   },
   {
@@ -782,8 +1404,13 @@
     "name": "Steamer",
     "category": "Espresso",
     "description": "Choice of flavor syrup and steamed milk.",
-    "ingredients": ["flavor syrup", "steamed milk"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "flavor syrup",
+      "steamed milk"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "Sizes: 8oz, 12oz, 16oz."
   },
   {
@@ -791,8 +1418,14 @@
     "name": "Matcha Latte",
     "category": "Espresso",
     "description": "Green tea powder, honey, and steamed milk.",
-    "ingredients": ["matcha green tea powder", "honey", "steamed milk"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "matcha green tea powder",
+      "honey",
+      "steamed milk"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "Sizes: 8oz, 12oz, 16oz."
   },
   {
@@ -800,7 +1433,10 @@
     "name": "Cold Brew Coffee",
     "category": "Espresso",
     "description": "House-brewed concentrate served over ice.",
-    "ingredients": ["cold brew concentrate", "ice"],
+    "ingredients": [
+      "cold brew concentrate",
+      "ice"
+    ],
     "notes": "Sizes: 8oz, 16oz."
   },
   {
@@ -817,99 +1453,131 @@
     "description": "Available syrups: vanilla, sugar-free vanilla, hazelnut, caramel, chocolate, white chocolate, real Vermont maple syrup.",
     "ingredients": []
   },
-
   {
     "id": "tea-english-breakfast",
     "name": "English Breakfast",
     "category": "Tea",
     "description": "Caffeinated black tea.",
-    "ingredients": ["black tea"]
+    "ingredients": [
+      "black tea"
+    ]
   },
   {
     "id": "tea-creme-earl-grey",
-    "name": "Crème De La Earl Grey",
+    "name": "Cr\u00e8me De La Earl Grey",
     "category": "Tea",
     "description": "Caffeinated black tea.",
-    "ingredients": ["black tea", "bergamot"]
+    "ingredients": [
+      "black tea",
+      "bergamot"
+    ]
   },
   {
     "id": "tea-genmaicha",
     "name": "Genmaicha",
     "category": "Tea",
     "description": "Caffeinated green tea with toasted rice.",
-    "ingredients": ["green tea", "toasted rice"]
+    "ingredients": [
+      "green tea",
+      "toasted rice"
+    ]
   },
   {
     "id": "tea-ginger-peach",
     "name": "Ginger Peach",
     "category": "Tea",
     "description": "Caffeinated black tea with ginger and peach.",
-    "ingredients": ["black tea", "ginger", "peach"]
+    "ingredients": [
+      "black tea",
+      "ginger",
+      "peach"
+    ]
   },
   {
     "id": "tea-jamming-spring",
     "name": "Jamming Spring Special",
     "category": "Tea",
     "description": "Caffeinated green tea, seasonal special.",
-    "ingredients": ["green tea"]
+    "ingredients": [
+      "green tea"
+    ]
   },
   {
     "id": "tea-geyser-basin",
     "name": "Geyser Basin Green",
     "category": "Tea",
     "description": "Caffeinated green tea.",
-    "ingredients": ["green tea"]
+    "ingredients": [
+      "green tea"
+    ]
   },
   {
     "id": "tea-matcha",
     "name": "Matcha",
     "category": "Tea",
     "description": "Caffeinated powdered green tea.",
-    "ingredients": ["matcha green tea"]
+    "ingredients": [
+      "matcha green tea"
+    ]
   },
   {
     "id": "tea-vanilla-rooibos",
     "name": "Vanilla Rooibos",
     "category": "Tea",
     "description": "Herbal tea, caffeine-free.",
-    "ingredients": ["rooibos", "vanilla"]
+    "ingredients": [
+      "rooibos",
+      "vanilla"
+    ]
   },
   {
     "id": "tea-big-sky-blend",
     "name": "Big Sky Blend",
     "category": "Tea",
     "description": "Herbal tea, caffeine-free.",
-    "ingredients": ["herbal blend"]
+    "ingredients": [
+      "herbal blend"
+    ]
   },
   {
     "id": "tea-chamomile",
     "name": "Chamomile",
     "category": "Tea",
     "description": "Herbal tea, caffeine-free.",
-    "ingredients": ["chamomile"]
+    "ingredients": [
+      "chamomile"
+    ]
   },
   {
     "id": "tea-storm-castle-chai",
     "name": "Storm Castle Chai",
     "category": "Tea",
     "description": "Herbal chai blend, caffeine-free.",
-    "ingredients": ["chai spices"]
+    "ingredients": [
+      "chai spices"
+    ]
   },
   {
     "id": "tea-peppermint",
     "name": "Peppermint",
     "category": "Tea",
     "description": "Herbal tea, caffeine-free.",
-    "ingredients": ["peppermint"]
+    "ingredients": [
+      "peppermint"
+    ]
   },
-
   {
     "id": "drink-bloody-mary",
     "name": "Bloody Mary",
     "category": "Specialty Drinks",
     "description": "House-made bloody Mary mix and house-infused vodka.",
-    "ingredients": ["house bloody mary mix", "vodka"],
-    "allergens": ["shellfish"],
+    "ingredients": [
+      "house bloody mary mix",
+      "vodka"
+    ],
+    "allergens": [
+      "shellfish"
+    ],
     "notes": "Available sm/lg. Contains shellfish."
   },
   {
@@ -917,22 +1585,31 @@
     "name": "Fun Bucket",
     "category": "Specialty Drinks",
     "description": "A bottle of our house Italian Prosecco.",
-    "ingredients": ["Italian Prosecco"]
+    "ingredients": [
+      "Italian Prosecco"
+    ]
   },
   {
     "id": "drink-mimosa",
     "name": "Mimosa",
     "category": "Specialty Drinks",
     "description": "House Italian Prosecco and your choice of any juice.",
-    "ingredients": ["Italian Prosecco", "juice"],
-    "notes": "Available sm/lg. Upgrade to Cremant Brut $10 or Brut Rosé $14."
+    "ingredients": [
+      "Italian Prosecco",
+      "juice"
+    ],
+    "notes": "Available sm/lg. Upgrade to Cremant Brut $10 or Brut Ros\u00e9 $14."
   },
   {
     "id": "drink-jameosa",
     "name": "Jameosa",
     "category": "Specialty Drinks",
     "description": "House Italian Prosecco mixed with fresh-squeezed orange and grapefruit juice.",
-    "ingredients": ["Italian Prosecco", "fresh-squeezed orange juice", "fresh-squeezed grapefruit juice"],
+    "ingredients": [
+      "Italian Prosecco",
+      "fresh-squeezed orange juice",
+      "fresh-squeezed grapefruit juice"
+    ],
     "notes": "Available sm/lg."
   },
   {
@@ -940,7 +1617,13 @@
     "name": "Blushing Mimosa",
     "category": "Specialty Drinks",
     "description": "House Italian Prosecco, fresh orange juice, pineapple juice, and Bordeaux cherry juice. Garnished with rosemary sprig.",
-    "ingredients": ["Italian Prosecco", "orange juice", "pineapple juice", "Bordeaux cherry juice", "rosemary"],
+    "ingredients": [
+      "Italian Prosecco",
+      "orange juice",
+      "pineapple juice",
+      "Bordeaux cherry juice",
+      "rosemary"
+    ],
     "notes": "Available sm/lg."
   },
   {
@@ -948,7 +1631,12 @@
     "name": "G-Funk Mimosa",
     "category": "Specialty Drinks",
     "description": "House Italian Prosecco, fresh grapefruit juice, and elderflower syrup. Garnished with rosemary sprig.",
-    "ingredients": ["Italian Prosecco", "grapefruit juice", "elderflower syrup", "rosemary"],
+    "ingredients": [
+      "Italian Prosecco",
+      "grapefruit juice",
+      "elderflower syrup",
+      "rosemary"
+    ],
     "notes": "Available sm/lg."
   },
   {
@@ -956,7 +1644,12 @@
     "name": "Huckleberry Lemonade",
     "category": "Specialty Drinks",
     "description": "House Italian Prosecco, huckleberry syrup, and lemonade. Garnished with a lemon wedge.",
-    "ingredients": ["Italian Prosecco", "huckleberry syrup", "lemonade", "lemon"],
+    "ingredients": [
+      "Italian Prosecco",
+      "huckleberry syrup",
+      "lemonade",
+      "lemon"
+    ],
     "notes": "12oz."
   },
   {
@@ -964,8 +1657,13 @@
     "name": "Beermosa",
     "category": "Specialty Drinks",
     "description": "Pilsner and freshly squeezed orange juice. Can be made with other craft beer.",
-    "ingredients": ["pilsner", "orange juice"],
-    "allergens": ["gluten"],
+    "ingredients": [
+      "pilsner",
+      "orange juice"
+    ],
+    "allergens": [
+      "gluten"
+    ],
     "notes": "16oz."
   },
   {
@@ -973,8 +1671,14 @@
     "name": "Red Beer",
     "category": "Specialty Drinks",
     "description": "Pilsner and house tomato bloody mary mix.",
-    "ingredients": ["pilsner", "tomato bloody mary mix"],
-    "allergens": ["gluten", "shellfish"],
+    "ingredients": [
+      "pilsner",
+      "tomato bloody mary mix"
+    ],
+    "allergens": [
+      "gluten",
+      "shellfish"
+    ],
     "notes": "16oz."
   },
   {
@@ -982,8 +1686,13 @@
     "name": "Moomosa",
     "category": "Specialty Drinks",
     "description": "Strange Cattle IPA and fresh-squeezed orange juice.",
-    "ingredients": ["Strange Cattle IPA", "orange juice"],
-    "allergens": ["gluten"],
+    "ingredients": [
+      "Strange Cattle IPA",
+      "orange juice"
+    ],
+    "allergens": [
+      "gluten"
+    ],
     "notes": "16oz."
   },
   {
@@ -991,7 +1700,12 @@
     "name": "Paloma",
     "category": "Specialty Drinks",
     "description": "Wine-based tequila, fresh grapefruit juice, and a splash of 7-Up. Garnished with a lime wedge.",
-    "ingredients": ["wine-based tequila", "grapefruit juice", "7-Up", "lime"],
+    "ingredients": [
+      "wine-based tequila",
+      "grapefruit juice",
+      "7-Up",
+      "lime"
+    ],
     "notes": "12oz."
   },
   {
@@ -999,7 +1713,11 @@
     "name": "Corkscrew-Driver",
     "category": "Specialty Drinks",
     "description": "Wine-based vodka and fresh-squeezed orange juice. Garnished with an orange slice.",
-    "ingredients": ["wine-based vodka", "orange juice", "orange"],
+    "ingredients": [
+      "wine-based vodka",
+      "orange juice",
+      "orange"
+    ],
     "notes": "12oz."
   },
   {
@@ -1007,7 +1725,13 @@
     "name": "Jam Sangria",
     "category": "Specialty Drinks",
     "description": "Red wine, brandy, wine-based tequila, fresh-squeezed orange juice, and Bordeaux cherry juice. Garnished with an orange slice and Bordeaux cherry.",
-    "ingredients": ["red wine", "brandy", "wine-based tequila", "orange juice", "Bordeaux cherry juice"],
+    "ingredients": [
+      "red wine",
+      "brandy",
+      "wine-based tequila",
+      "orange juice",
+      "Bordeaux cherry juice"
+    ],
     "notes": "12oz."
   },
   {
@@ -1015,8 +1739,13 @@
     "name": "Irish Coffee",
     "category": "Specialty Drinks",
     "description": "Drip coffee and Irish cream.",
-    "ingredients": ["drip coffee", "Irish cream"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "drip coffee",
+      "Irish cream"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "12oz."
   },
   {
@@ -1024,34 +1753,45 @@
     "name": "Irish Chai Latte",
     "category": "Specialty Drinks",
     "description": "Oregon Chai, steamed milk, and Irish cream.",
-    "ingredients": ["Oregon Chai", "steamed milk", "Irish cream"],
-    "allergens": ["dairy"],
+    "ingredients": [
+      "Oregon Chai",
+      "steamed milk",
+      "Irish cream"
+    ],
+    "allergens": [
+      "dairy"
+    ],
     "notes": "Sizes: 8oz, 12oz, 16oz."
   },
-
   {
     "id": "draught-bozone-amber",
     "name": "Bozone Amber Ale",
     "category": "Draught Beer",
     "description": "Bozeman Brewing (Bozeman, MT). A light amber ale with a medium malt body gently balanced by a hint of hops for a clean, refreshing finish. Dry hopped with Cascade for a pleasant aroma.",
-    "ingredients": ["amber ale"],
-    "allergens": ["gluten"]
+    "ingredients": [],
+    "allergens": [
+      "gluten"
+    ]
   },
   {
     "id": "draught-bavik-pilsner",
     "name": "Bavik Pilsner",
     "category": "Draught Beer",
     "description": "Brewery De Brabandere (Bavikhove, Belgium). More hops than a lager, but lighter than a pale ale.",
-    "ingredients": ["pilsner"],
-    "allergens": ["gluten"]
+    "ingredients": [],
+    "allergens": [
+      "gluten"
+    ]
   },
   {
     "id": "draught-strange-cattle",
     "name": "Strange Cattle IPA",
     "category": "Draught Beer",
     "description": "Map Brewery (Bozeman, MT). New England-style IPA with bursts of pineapple and stone fruits complementing the complex, juicy flavor.",
-    "ingredients": ["IPA"],
-    "allergens": ["gluten"],
+    "ingredients": [],
+    "allergens": [
+      "gluten"
+    ],
     "notes": "16oz."
   },
   {
@@ -1059,15 +1799,17 @@
     "name": "Fiesta Select Mexican Lager",
     "category": "Draught Beer",
     "description": "Bozeman Brewing (Bozeman, MT). Crushable, clean-finishing beer with a hint of corn. 5% ABV.",
-    "ingredients": ["Mexican lager"],
-    "allergens": ["gluten"]
+    "ingredients": [],
+    "allergens": [
+      "gluten"
+    ]
   },
   {
     "id": "draught-huckleberry-kombucha",
     "name": "Huckleberry Hopped Kombucha (N/A)",
     "category": "Draught Beer",
     "description": "Happy Mountain Kombucha Co., Portland, OR. Non-alcoholic.",
-    "ingredients": ["kombucha"]
+    "ingredients": []
   },
   {
     "id": "draught-seasonal",
@@ -1075,64 +1817,78 @@
     "category": "Draught Beer",
     "description": "Rotating seasonal beer.",
     "ingredients": [],
-    "allergens": ["gluten"]
+    "allergens": [
+      "gluten"
+    ]
   },
-
   {
     "id": "bottle-coors-light",
     "name": "Coors Light",
     "category": "Bottles & Cans",
     "description": "Coors Light, 12 oz.",
-    "ingredients": ["lager"],
-    "allergens": ["gluten"]
+    "ingredients": [],
+    "allergens": [
+      "gluten"
+    ]
   },
   {
     "id": "bottle-free-wave",
     "name": "Free Wave Non-Alcoholic Hazy IPA",
     "category": "Bottles & Cans",
     "description": "Free Wave non-alcoholic Hazy IPA, 12 oz.",
-    "ingredients": ["non-alcoholic IPA"],
-    "allergens": ["gluten"]
+    "ingredients": [],
+    "allergens": [
+      "gluten"
+    ]
   },
-
   {
     "id": "wine-house-white",
-    "name": "House White – Quadrum White Blend",
+    "name": "House White \u2013 Quadrum White Blend",
     "category": "Wine",
     "description": "Quadrum White Blend (Spain). 30% Sauvignon Blanc, 70% Verdejo.",
-    "ingredients": ["sauvignon blanc", "verdejo"],
-    "allergens": ["sulfites"]
+    "ingredients": [],
+    "allergens": [
+      "sulfites"
+    ]
   },
   {
     "id": "wine-la-bella-prosecco",
     "name": "La Bella Prosecco",
     "category": "Wine",
     "description": "Sparkling. Veneto, Italy.",
-    "ingredients": ["prosecco"],
-    "allergens": ["sulfites"]
+    "ingredients": [],
+    "allergens": [
+      "sulfites"
+    ]
   },
   {
     "id": "wine-gerard-bertrand",
     "name": "Gerard Bertrand Cremant Brut",
     "category": "Wine",
     "description": "Sparkling. Limoux, France.",
-    "ingredients": ["cremant"],
-    "allergens": ["sulfites"]
+    "ingredients": [],
+    "allergens": [
+      "sulfites"
+    ]
   },
   {
     "id": "wine-cavicchioli-rose",
-    "name": "Cavicchioli 1928 Sparkling Rosé",
+    "name": "Cavicchioli 1928 Sparkling Ros\u00e9",
     "category": "Wine",
-    "description": "Sparkling rosé. Emilia-Romagna, Italy.",
-    "ingredients": ["sparkling rosé"],
-    "allergens": ["sulfites"]
+    "description": "Sparkling ros\u00e9. Emilia-Romagna, Italy.",
+    "ingredients": [],
+    "allergens": [
+      "sulfites"
+    ]
   },
   {
     "id": "wine-jean-luc-rose",
-    "name": "Jean-Luc Colombo Rosé",
+    "name": "Jean-Luc Colombo Ros\u00e9",
     "category": "Wine",
-    "description": "Rosé. Cornas, France.",
-    "ingredients": ["rosé"],
-    "allergens": ["sulfites"]
+    "description": "Ros\u00e9. Cornas, France.",
+    "ingredients": [],
+    "allergens": [
+      "sulfites"
+    ]
   }
 ]
