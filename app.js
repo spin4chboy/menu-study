@@ -1,5 +1,67 @@
 const KNOWN_KEY = "menuStudy.knownIds";
 const QUIZ_STATS_KEY = "menuStudy.quizStats";
+const UNLOCK_KEY = "menuStudy.unlocked";
+const SITE_PASSWORD = "yum";
+
+function setupPasswordGate() {
+  if (localStorage.getItem(UNLOCK_KEY) === "true") {
+    document.documentElement.classList.remove("locked");
+    return;
+  }
+  document.documentElement.classList.add("locked");
+
+  const gate = document.createElement("div");
+  gate.className = "lock-screen";
+  gate.innerHTML = `
+    <div class="lock-card">
+      <div class="lock-eyebrow">Staff Access</div>
+      <div class="lock-title">JAM!</div>
+      <div class="lock-sub">Menu Exam Study Guide</div>
+      <form id="lock-form" class="lock-form" autocomplete="off">
+        <label for="lock-input" class="lock-label">Password</label>
+        <input id="lock-input" type="password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+        <button type="submit" class="btn">Enter</button>
+      </form>
+      <p id="lock-error" class="lock-error"></p>
+    </div>
+  `;
+  document.body.appendChild(gate);
+
+  const form = gate.querySelector("#lock-form");
+  const input = gate.querySelector("#lock-input");
+  const errorEl = gate.querySelector("#lock-error");
+  const card = gate.querySelector(".lock-card");
+  setTimeout(() => input.focus(), 50);
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const v = (input.value || "").trim().toLowerCase();
+    if (v === SITE_PASSWORD) {
+      localStorage.setItem(UNLOCK_KEY, "true");
+      gate.classList.add("unlocking");
+      document.documentElement.classList.remove("locked");
+      document.body.style.opacity = "0";
+      setTimeout(() => {
+        gate.remove();
+        document.body.style.transition = "opacity 0.7s ease-out";
+        document.body.style.opacity = "1";
+        setTimeout(() => {
+          document.body.style.transition = "";
+          document.body.style.opacity = "";
+        }, 800);
+      }, 350);
+    } else {
+      errorEl.textContent = "Nah, try again.";
+      input.value = "";
+      input.focus();
+      card.classList.remove("shake");
+      void card.offsetWidth;
+      card.classList.add("shake");
+    }
+  });
+}
+document.addEventListener("DOMContentLoaded", setupPasswordGate);
+if (document.readyState !== "loading") setupPasswordGate();
 
 // Loading-screen tips
 const LOADING_TIPS = [

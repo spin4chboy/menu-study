@@ -570,6 +570,111 @@ code {
   to { transform: translateX(-100%); }
 }
 
+/* Password gate */
+html.locked > body > :not(.lock-screen) { display: none !important; }
+html.locked, html.locked > body { background: var(--navy); }
+
+.lock-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  background: var(--navy);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+  animation: pageFadeIn 0.35s ease-out;
+}
+.lock-screen.unlocking {
+  animation: lockFadeOut 0.35s ease-in forwards;
+}
+@keyframes lockFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.lock-card {
+  width: min(440px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.lock-card.shake { animation: lockShake 0.45s ease; }
+@keyframes lockShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+.lock-eyebrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--yellow);
+  font-weight: 700;
+}
+.lock-title {
+  font-family: "Bowlby One", sans-serif;
+  font-size: clamp(3.5rem, 16vw, 6rem);
+  text-transform: uppercase;
+  color: var(--yellow);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+}
+.lock-sub {
+  font-family: "Bowlby One", sans-serif;
+  font-size: clamp(0.95rem, 3vw, 1.25rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--cream);
+  margin-bottom: 0.75rem;
+}
+.lock-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.lock-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: var(--cream);
+  opacity: 0.75;
+  text-align: left;
+}
+.lock-form input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(248, 243, 240, 0.08);
+  border: 2px solid var(--cream);
+  border-radius: 12px;
+  color: var(--cream);
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.lock-form input:focus {
+  outline: none;
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 2px var(--yellow);
+}
+.lock-form .btn { width: 100%; }
+.lock-error {
+  min-height: 1.4em;
+  margin: 0;
+  color: #ff6b6b;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
 /* Loading screen */
 .loading-screen {
   position: fixed;
