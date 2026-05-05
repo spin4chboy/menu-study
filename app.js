@@ -4,7 +4,7 @@ const UNLOCK_KEY = "menuStudy.unlocked";
 const SITE_PASSWORD = "yum";
 
 function setupPasswordGate() {
-  if (localStorage.getItem(UNLOCK_KEY) === "true") {
+  if (sessionStorage.getItem(UNLOCK_KEY) === "true") {
     document.documentElement.classList.remove("locked");
     return;
   }
@@ -37,7 +37,7 @@ function setupPasswordGate() {
     e.preventDefault();
     const v = (input.value || "").trim().toLowerCase();
     if (v === SITE_PASSWORD) {
-      localStorage.setItem(UNLOCK_KEY, "true");
+      sessionStorage.setItem(UNLOCK_KEY, "true");
       gate.classList.add("unlocking");
       document.documentElement.classList.remove("locked");
       document.body.style.opacity = "0";
