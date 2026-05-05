@@ -178,7 +178,6 @@ async function initBrowse() {
     card.appendChild(header);
 
     const details = el("div", { class: "card-details" }, [
-      el("p", { class: "card-desc" }, item.description),
       item.ingredients && item.ingredients.length
         ? el("p", {}, [el("strong", {}, "Ingredients: "), item.ingredients.join(", ")])
         : null,
@@ -252,7 +251,6 @@ async function initFlashcards() {
     frontEl.innerHTML = `<div class="fc-name">${current.name}</div><div class="fc-hint">tap to reveal</div>`;
     backEl.innerHTML = `
       <div class="fc-price">${[formatPrice(current.price), current.category].filter(Boolean).join(" · ")}</div>
-      <p>${current.description}</p>
       ${current.ingredients && current.ingredients.length ? `<p><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>` : ""}
       ${current.allergens && current.allergens.length ? `<p><strong>Allergens:</strong> ${current.allergens.join(", ")}</p>` : ""}
       ${current.notes ? `<p class="fc-notes">${current.notes}</p>` : ""}
@@ -329,11 +327,11 @@ async function initQuiz() {
 
   // --- Mode 1: Name the dish ---
   function pickNameQuestion() {
-    current = items[Math.floor(Math.random() * items.length)];
+    const eligible = items.filter((i) => i.ingredients && i.ingredients.length >= 1);
+    current = eligible[Math.floor(Math.random() * eligible.length)];
     promptEl.innerHTML = `
       <div class="quiz-category">${current.category}</div>
-      <p>${current.description}</p>
-      ${current.ingredients && current.ingredients.length ? `<p class="quiz-hint"><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>` : ""}
+      <p><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>
     `;
 
     const sameCategory = items.filter((i) => i.category === current.category && i.id !== current.id);
