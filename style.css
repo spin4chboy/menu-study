@@ -350,6 +350,55 @@ code {
 .quiz-option.correct { background: var(--teal); border-color: var(--navy); color: var(--navy); }
 .quiz-option.incorrect { background: #d94545; color: #fff; border-color: #d94545; }
 
+.quiz-modes {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+  justify-content: center;
+}
+
+.ingredient-grid {
+  grid-template-columns: 1fr 1fr !important;
+  gap: 0.5rem;
+}
+@media (max-width: 480px) {
+  .ingredient-grid { grid-template-columns: 1fr !important; }
+}
+
+.ingredient-choice {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--cream);
+  border: 2px solid var(--navy);
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  user-select: none;
+  transition: background 0.15s;
+}
+.ingredient-choice:hover { background: var(--orange); }
+.ingredient-choice input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--navy);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.ingredient-choice.correct {
+  background: var(--teal);
+  border-color: var(--navy);
+}
+.ingredient-choice.incorrect {
+  background: #d94545;
+  color: #fff;
+  border-color: #d94545;
+}
+.ingredient-choice.incorrect input { accent-color: #fff; }
+
 .feedback {
   text-align: center;
   min-height: 1.5em;

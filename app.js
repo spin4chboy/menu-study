@@ -269,18 +269,44 @@ async function initQuiz() {
   const feedbackEl = document.getElementById("quiz-feedback");
   const nextBtn = document.getElementById("quiz-next");
   const scoreEl = document.getElementById("quiz-score");
+  const modeButtons = document.querySelectorAll("[data-mode]");
 
+  let mode = "name";
   let current = null;
   let answered = false;
   let sessionCorrect = 0;
   let sessionTotal = 0;
+
+  function setMode(newMode) {
+    mode = newMode;
+    for (const b of modeButtons) {
+      b.classList.toggle("chip-active", b.dataset.mode === mode);
+    }
+    sessionCorrect = 0;
+    sessionTotal = 0;
+    scoreEl.textContent = "Session: 0 / 0";
+    pickQuestion();
+  }
+
+  for (const b of modeButtons) {
+    b.addEventListener("click", () => setMode(b.dataset.mode));
+  }
 
   function pickQuestion() {
     answered = false;
     feedbackEl.textContent = "";
     feedbackEl.className = "";
     nextBtn.style.visibility = "hidden";
+    nextBtn.disabled = false;
+    nextBtn.textContent = "Next →";
+    nextBtn.onclick = () => pickQuestion();
 
+    if (mode === "name") return pickNameQuestion();
+    if (mode === "ingredients") return pickIngredientsQuestion();
+  }
+
+  // --- Mode 1: Name the dish ---
+  function pickNameQuestion() {
     current = items[Math.floor(Math.random() * items.length)];
     promptEl.innerHTML = `
       <div class="quiz-category">${current.category}</div>
@@ -297,13 +323,14 @@ async function initQuiz() {
     }
     const choices = shuffle([current, ...distractors]);
 
+    optionsEl.className = "quiz-options";
     optionsEl.innerHTML = "";
     for (const c of choices) {
       const btn = el(
         "button",
         {
           class: "btn quiz-option",
-          onClick: () => handleAnswer(btn, c),
+          onClick: () => handleNameAnswer(btn, c),
         },
         c.name
       );
@@ -311,7 +338,7 @@ async function initQuiz() {
     }
   }
 
-  function handleAnswer(btn, choice) {
+  function handleNameAnswer(btn, choice) {
     if (answered) return;
     answered = true;
     const isCorrect = choice.id === current.id;
@@ -325,15 +352,98 @@ async function initQuiz() {
     }
     if (!isCorrect) btn.classList.add("incorrect");
 
-    feedbackEl.textContent = isCorrect
-      ? "Correct!"
-      : `Not quite — answer: ${current.name}.`;
+    feedbackEl.textContent = isCorrect ? "Correct!" : `Not quite — answer: ${current.name}.`;
     feedbackEl.className = isCorrect ? "feedback correct-text" : "feedback incorrect-text";
     scoreEl.textContent = `Session: ${sessionCorrect} / ${sessionTotal}`;
     nextBtn.style.visibility = "visible";
   }
 
-  nextBtn.addEventListener("click", pickQuestion);
+  // --- Mode 2: Pick the ingredients ---
+  function pickIngredientsQuestion() {
+    const eligible = items.filter((i) => i.ingredients && i.ingredients.length >= 3);
+    current = eligible[Math.floor(Math.random() * eligible.length)];
+
+    const correctSet = new Set(current.ingredients.map((s) => s.toLowerCase().trim()));
+    const decoyPool = new Set();
+    for (const it of items) {
+      if (it.id === current.id || !it.ingredients) continue;
+      for (const ing of it.ingredients) {
+        const k = ing.toLowerCase().trim();
+        if (!correctSet.has(k)) decoyPool.add(ing);
+      }
+    }
+    const decoyCount = current.ingredients.length;
+    const decoys = shuffle([...decoyPool]).slice(0, decoyCount);
+    const allChoices = shuffle([
+      ...current.ingredients.map((ing) => ({ name: ing, correct: true })),
+      ...decoys.map((ing) => ({ name: ing, correct: false })),
+    ]);
+
+    promptEl.innerHTML = `
+      <div class="quiz-category">${current.category}</div>
+      <p style="font-family: 'Bowlby One', sans-serif; font-size: 1.4rem; text-transform: uppercase; line-height: 1.05; margin-top: 0.25rem;">${current.name}</p>
+      <p class="quiz-hint">Select all the ingredients in this item.</p>
+    `;
+
+    optionsEl.className = "quiz-options ingredient-grid";
+    optionsEl.innerHTML = "";
+    for (const c of allChoices) {
+      const label = el("label", { class: "ingredient-choice" });
+      const cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.dataset.correct = c.correct ? "1" : "0";
+      cb.dataset.name = c.name;
+      label.appendChild(cb);
+      label.appendChild(document.createTextNode(" " + c.name));
+      optionsEl.appendChild(label);
+    }
+
+    nextBtn.textContent = "Check";
+    nextBtn.style.visibility = "visible";
+    nextBtn.disabled = false;
+    nextBtn.onclick = handleIngredientsCheck;
+  }
+
+  function handleIngredientsCheck() {
+    const checkboxes = optionsEl.querySelectorAll("input[type=checkbox]");
+    let allRight = true;
+    let wrongChecked = 0;
+    let missed = 0;
+
+    for (const cb of checkboxes) {
+      const label = cb.parentElement;
+      label.classList.remove("correct", "incorrect", "missed");
+      const isCorrect = cb.dataset.correct === "1";
+      if (cb.checked && isCorrect) {
+        label.classList.add("correct");
+        cb.disabled = true;
+      } else if (cb.checked && !isCorrect) {
+        label.classList.add("incorrect");
+        wrongChecked += 1;
+        allRight = false;
+      } else if (!cb.checked && isCorrect) {
+        missed += 1;
+        allRight = false;
+      }
+    }
+
+    if (allRight) {
+      sessionTotal += 1;
+      sessionCorrect += 1;
+      recordQuizAnswer(true);
+      scoreEl.textContent = `Session: ${sessionCorrect} / ${sessionTotal}`;
+      feedbackEl.textContent = "Locked in! All correct.";
+      feedbackEl.className = "feedback correct-text";
+      nextBtn.textContent = "Next →";
+      nextBtn.onclick = () => pickQuestion();
+    } else {
+      const parts = [];
+      if (wrongChecked) parts.push(`${wrongChecked} wrong`);
+      if (missed) parts.push(`${missed} missing`);
+      feedbackEl.textContent = `Nah — ${parts.join(", ")}. Fix it and try again.`;
+      feedbackEl.className = "feedback incorrect-text";
+    }
+  }
 
   scoreEl.textContent = "Session: 0 / 0";
   pickQuestion();
