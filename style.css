@@ -23,6 +23,18 @@ body {
   line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
+  animation: pageFadeIn 0.35s ease-out;
+}
+body.page-leave {
+  animation: pageFadeOut 0.22s ease-in forwards;
+}
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes pageFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 header, main, footer {

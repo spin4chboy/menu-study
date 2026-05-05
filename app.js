@@ -1,6 +1,22 @@
 const KNOWN_KEY = "menuStudy.knownIds";
 const QUIZ_STATS_KEY = "menuStudy.quizStats";
 
+// Smooth fade between pages
+function setupPageTransitions() {
+  document.querySelectorAll("a[href]").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("http") || href.startsWith("#") || href.startsWith("mailto:")) return;
+    link.addEventListener("click", (e) => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || link.target === "_blank") return;
+      e.preventDefault();
+      document.body.classList.add("page-leave");
+      setTimeout(() => { window.location.href = href; }, 220);
+    });
+  });
+}
+document.addEventListener("DOMContentLoaded", setupPageTransitions);
+if (document.readyState !== "loading") setupPageTransitions();
+
 async function loadMenu() {
   const res = await fetch("menu.json", { cache: "no-cache" });
   if (!res.ok) throw new Error("Failed to load menu.json");
