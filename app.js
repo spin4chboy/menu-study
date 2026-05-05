@@ -310,12 +310,41 @@ async function initQuiz() {
   const nextBtn = document.getElementById("quiz-next");
   const scoreEl = document.getElementById("quiz-score");
   const modeButtons = document.querySelectorAll("[data-mode]");
+  const categoryBar = document.getElementById("quiz-categories");
 
   let mode = "name";
+  let activeCategory = "All";
   let current = null;
   let answered = false;
   let sessionCorrect = 0;
   let sessionTotal = 0;
+
+  function getPool() {
+    return activeCategory === "All" ? items : items.filter((i) => i.category === activeCategory);
+  }
+
+  function renderCategories() {
+    categoryBar.innerHTML = "";
+    const cats = ["All", ...getCategories(items)];
+    for (const c of cats) {
+      const btn = el(
+        "button",
+        {
+          class: "chip" + (c === activeCategory ? " chip-active" : ""),
+          onClick: () => {
+            activeCategory = c;
+            renderCategories();
+            sessionCorrect = 0;
+            sessionTotal = 0;
+            scoreEl.textContent = "Session: 0 / 0";
+            pickQuestion();
+          },
+        },
+        c
+      );
+      categoryBar.appendChild(btn);
+    }
+  }
 
   function setMode(newMode) {
     mode = newMode;
@@ -347,20 +376,23 @@ async function initQuiz() {
 
   // --- Mode 1: Name the dish ---
   function pickNameQuestion() {
-    const eligible = items.filter((i) => i.ingredients && i.ingredients.length >= 1);
+    const pool = getPool();
+    const eligible = pool.filter((i) => i.ingredients && i.ingredients.length >= 1);
+    if (eligible.length < 2) {
+      promptEl.innerHTML = "";
+      optionsEl.className = "quiz-options";
+      optionsEl.innerHTML = `<p class="empty-msg">Not enough items in <strong>${activeCategory}</strong> with ingredients to quiz on. Pick another category.</p>`;
+      nextBtn.style.visibility = "hidden";
+      return;
+    }
     current = eligible[Math.floor(Math.random() * eligible.length)];
     promptEl.innerHTML = `
       <div class="quiz-category">${current.category}</div>
       <p><strong>Ingredients:</strong> ${current.ingredients.join(", ")}</p>
     `;
 
-    const sameCategory = items.filter((i) => i.category === current.category && i.id !== current.id);
-    const otherCategory = items.filter((i) => i.category !== current.category);
-    const distractors = shuffle(sameCategory).slice(0, 3);
-    while (distractors.length < 3 && otherCategory.length) {
-      const pick = otherCategory[Math.floor(Math.random() * otherCategory.length)];
-      if (!distractors.includes(pick)) distractors.push(pick);
-    }
+    const distractorPool = pool.filter((i) => i.id !== current.id);
+    const distractors = shuffle(distractorPool).slice(0, Math.min(3, distractorPool.length));
     const choices = shuffle([current, ...distractors]);
 
     optionsEl.className = "quiz-options";
@@ -401,19 +433,27 @@ async function initQuiz() {
 
   // --- Mode 2: Pick the ingredients ---
   function pickIngredientsQuestion() {
-    const eligible = items.filter((i) => i.ingredients && i.ingredients.length >= 3);
+    const pool = getPool();
+    const eligible = pool.filter((i) => i.ingredients && i.ingredients.length >= 3);
+    if (eligible.length < 1) {
+      promptEl.innerHTML = "";
+      optionsEl.className = "quiz-options";
+      optionsEl.innerHTML = `<p class="empty-msg">Not enough items in <strong>${activeCategory}</strong> with full ingredient lists. Pick another category.</p>`;
+      nextBtn.style.visibility = "hidden";
+      return;
+    }
     current = eligible[Math.floor(Math.random() * eligible.length)];
 
     const correctSet = new Set(current.ingredients.map((s) => s.toLowerCase().trim()));
     const decoyPool = new Set();
-    for (const it of items) {
+    for (const it of pool) {
       if (it.id === current.id || !it.ingredients) continue;
       for (const ing of it.ingredients) {
         const k = ing.toLowerCase().trim();
         if (!correctSet.has(k)) decoyPool.add(ing);
       }
     }
-    const decoyCount = current.ingredients.length;
+    const decoyCount = Math.min(current.ingredients.length, decoyPool.size);
     const decoys = shuffle([...decoyPool]).slice(0, decoyCount);
     const allChoices = shuffle([
       ...current.ingredients.map((ing) => ({ name: ing, correct: true })),
@@ -487,6 +527,7 @@ async function initQuiz() {
     }
   }
 
+  renderCategories();
   scoreEl.textContent = "Session: 0 / 0";
   pickQuestion();
 }

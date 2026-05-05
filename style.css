@@ -366,8 +366,27 @@ code {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+  justify-content: center;
+}
+
+.quiz-categories {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
   margin-bottom: 1.25rem;
   justify-content: center;
+}
+.quiz-categories .chip {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.7rem;
+}
+
+.empty-msg {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-weight: 600;
+  opacity: 0.7;
 }
 
 .ingredient-grid {
