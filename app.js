@@ -332,6 +332,10 @@ async function initQuiz() {
       eligible = pool.filter(
         (i) => (i.ingredients && i.ingredients.length >= 1) || (i.description && i.description.length > 0)
       );
+    } else if (mode === "describe") {
+      eligible = pool.filter(
+        (i) => (i.ingredients && i.ingredients.length >= 1) || (i.description && i.description.length > 0)
+      );
     } else {
       eligible = pool.filter((i) => i.ingredients && i.ingredients.length >= 3);
     }
@@ -401,6 +405,7 @@ async function initQuiz() {
     current = queue.pop();
     if (mode === "name") return pickNameQuestion();
     if (mode === "ingredients") return pickIngredientsQuestion();
+    if (mode === "describe") return pickDescribeQuestion();
   }
 
   function showCompletion() {
@@ -561,6 +566,193 @@ async function initQuiz() {
       feedbackEl.className = "feedback incorrect-text";
       showWrongFeedback();
     }
+  }
+
+  // --- Mode 3: Describe It ---
+  function pickDescribeQuestion() {
+    promptEl.innerHTML = `
+      <div class="quiz-category">${current.category}</div>
+      <p class="describe-name">${current.name}</p>
+      <p class="quiz-hint">Describe this item from memory — ingredients, dietary info, and any subs or add-ins. ${queue.length + 1} of ${cycleTotal} left.</p>
+    `;
+
+    optionsEl.className = "quiz-options";
+    optionsEl.innerHTML = `
+      <textarea id="describe-input" class="describe-input" rows="6" placeholder="Type your description here..."></textarea>
+      <div id="describe-feedback" class="describe-feedback"></div>
+    `;
+
+    nextBtn.textContent = "Submit";
+    nextBtn.style.visibility = "visible";
+    nextBtn.disabled = false;
+    nextBtn.onclick = handleDescribeSubmit;
+
+    setTimeout(() => {
+      const input = document.getElementById("describe-input");
+      if (input) input.focus();
+    }, 50);
+  }
+
+  function matchTokenInText(text, token) {
+    const t = token.toLowerCase().trim();
+    if (!t) return false;
+    if (text.includes(t)) return true;
+    const words = t.split(/[\s,\-]+/).filter((w) => w.length >= 4);
+    return words.some((w) => text.includes(w));
+  }
+
+  function dietaryFacts(item) {
+    const notes = (item.notes || "").toLowerCase();
+    const allergens = (item.allergens || []).map((a) => a.toLowerCase());
+    const facts = [];
+
+    const isVeg = /\(v\)/.test(notes);
+    const isVegan = /vegan/.test(notes);
+    const isGFNative = /comes\s*\(?gf\)?|comes gluten[- ]free|\(gf\)\s*\(v\)/.test(notes);
+    const hasGFSub = /sub gluten[- ]free|if \(gf\)|gluten[- ]free.*\$|\$.*gluten[- ]free/.test(notes);
+
+    if (isVegan) facts.push({ key: "vegan", label: "Vegan", positive: true });
+    else if (isVeg) facts.push({ key: "vegetarian", label: "Vegetarian (V)", positive: true });
+    else if (allergens.length === 0 && !item.ingredients?.some((i) => /chicken|beef|pork|bacon|ham|salmon|fish|sausage|crab|shrimp/i.test(i))) {
+      // unknown — skip
+    } else {
+      facts.push({ key: "vegetarian", label: "Not vegetarian", positive: false });
+    }
+
+    if (isGFNative) facts.push({ key: "glutenFree", label: "Gluten-free as served", positive: true });
+    else if (allergens.includes("gluten")) facts.push({ key: "glutenFree", label: "Contains gluten", positive: false });
+
+    if (hasGFSub && !isGFNative) facts.push({ key: "glutenFreeSub", label: "Has a gluten-free sub", positive: true });
+
+    if (allergens.includes("dairy")) facts.push({ key: "dairy", label: "Contains dairy", positive: false });
+    if (allergens.includes("nuts") || allergens.includes("peanut")) facts.push({ key: "nuts", label: "Contains nuts", positive: false });
+
+    return facts;
+  }
+
+  function userMentionedFact(text, key) {
+    const checks = {
+      vegan: /\bvegan\b/,
+      vegetarian: /vegetarian|\bveg\b|\(v\)/,
+      glutenFree: /gluten[- ]free|\bgf\b/,
+      glutenFreeSub: /gluten[- ]free|\bgf\b|sub/,
+      dairy: /dairy|cheese|milk|cream|butter/,
+      nuts: /\bnut|almond|peanut|walnut|pecan/,
+    };
+    return checks[key] ? checks[key].test(text) : false;
+  }
+
+  function extractSubsAndAdds(item) {
+    const notes = item.notes || "";
+    const sentences = notes.split(/(?<=[.!])\s+/).filter(Boolean);
+    const subs = sentences.filter((s) => /sub|if \(gf\)|gluten[- ]free/i.test(s));
+    const adds = sentences.filter((s) => /\badd\b|upsell|upcharge|sub.*\$|\+\$/i.test(s) && !subs.includes(s));
+    return { subs, adds };
+  }
+
+  function handleDescribeSubmit() {
+    const input = document.getElementById("describe-input");
+    const fbEl = document.getElementById("describe-feedback");
+    if (!input || !fbEl) return;
+    const raw = input.value.trim();
+    if (!raw) {
+      fbEl.innerHTML = `<p class="describe-empty">Type somethin first, hon.</p>`;
+      return;
+    }
+    const text = raw.toLowerCase();
+
+    const ingredients = current.ingredients || [];
+    const hit = [];
+    const missed = [];
+    for (const ing of ingredients) {
+      if (matchTokenInText(text, ing)) hit.push(ing);
+      else missed.push(ing);
+    }
+
+    const ingScore = ingredients.length === 0 ? null : hit.length / ingredients.length;
+    const facts = dietaryFacts(current);
+    const factsResult = facts.map((f) => ({
+      ...f,
+      mentioned: userMentionedFact(text, f.key),
+    }));
+    const dietaryHit = factsResult.filter((f) => f.mentioned).length;
+    const dietaryTotal = factsResult.length;
+
+    const { subs, adds } = extractSubsAndAdds(current);
+    const subHits = subs.map((s) => ({ text: s, mentioned: matchTokenInText(text, s.replace(/[^a-z0-9 ]/gi, " ")) }));
+    const addHits = adds.map((a) => ({ text: a, mentioned: matchTokenInText(text, a.replace(/[^a-z0-9 ]/gi, " ")) }));
+
+    // Build feedback HTML
+    let html = "";
+
+    if (ingredients.length) {
+      html += `<div class="feedback-section">
+        <h4>Ingredients (${hit.length} / ${ingredients.length})</h4>
+        <ul class="fb-list">
+          ${hit.map((i) => `<li class="fb-hit">✓ ${i}</li>`).join("")}
+          ${missed.map((i) => `<li class="fb-miss">✗ ${i}</li>`).join("")}
+        </ul>
+      </div>`;
+    }
+
+    if (factsResult.length) {
+      html += `<div class="feedback-section dietary">
+        <h4>Dietary (${dietaryHit} / ${dietaryTotal} mentioned)</h4>
+        <ul class="fb-list">
+          ${factsResult.map((f) => `<li class="${f.mentioned ? "fb-hit" : "fb-miss"}">${f.mentioned ? "✓" : "✗"} ${f.label}</li>`).join("")}
+        </ul>
+      </div>`;
+    }
+
+    if (subs.length) {
+      html += `<div class="feedback-section">
+        <h4>Subs to know</h4>
+        <ul class="fb-list">
+          ${subHits.map((s) => `<li class="${s.mentioned ? "fb-hit" : "fb-miss"}">${s.mentioned ? "✓" : "✗"} ${s.text}</li>`).join("")}
+        </ul>
+      </div>`;
+    }
+
+    if (adds.length) {
+      html += `<div class="feedback-section">
+        <h4>Add-ins / upsells</h4>
+        <ul class="fb-list">
+          ${addHits.map((a) => `<li class="${a.mentioned ? "fb-hit" : "fb-miss"}">${a.mentioned ? "✓" : "✗"} ${a.text}</li>`).join("")}
+        </ul>
+      </div>`;
+    }
+
+    if (current.description) {
+      html += `<div class="feedback-section reference">
+        <h4>Reference description</h4>
+        <p>${current.description}</p>
+      </div>`;
+    }
+
+    fbEl.innerHTML = html;
+    input.disabled = true;
+
+    // Pass threshold: 70% ingredients + at least half dietary if any
+    const passIng = ingScore == null ? true : ingScore >= 0.7;
+    const passDietary = dietaryTotal === 0 ? true : dietaryHit / dietaryTotal >= 0.5;
+    const passed = passIng && passDietary;
+
+    sessionTotal += 1;
+    if (passed) {
+      sessionCorrect += 1;
+      recordQuizAnswer(true);
+      feedbackEl.textContent = "Solid description!";
+      feedbackEl.className = "feedback correct-text";
+    } else {
+      recordQuizAnswer(false);
+      feedbackEl.textContent = "Keep workin' on it — peep what you missed.";
+      feedbackEl.className = "feedback incorrect-text";
+      showWrongFeedback();
+    }
+    scoreEl.textContent = `Session: ${sessionCorrect} / ${sessionTotal}`;
+
+    nextBtn.textContent = "Next →";
+    nextBtn.onclick = () => pickQuestion();
   }
 
   renderCategories();
